@@ -1,0 +1,69 @@
+@import "../../../styles/variables";
+
+.typography {
+	font-family: $font-family;
+	color: $primary-color; /* Définissez la couleur par défaut */
+	font-size: $font-size-base; /* Définissez la taille de la police par défaut */
+	font-weight: $font-weight-regular; /* Définissez le poids de la police par défaut */
+	line-height: 1.5; /* Ajoutez d'autres styles de texte si nécessaire */
+	// Ajoutez d'autres styles de texte si nécessaire
+
+	// Définissez les styles pour chaque couleur de texte
+	&.primary {
+		color: $primary-color;
+	}
+
+	&.secondary {
+		color: $secondary-color;
+	}
+
+	&.accent {
+		color: $accent-color;
+	}
+
+	// Définissez les styles pour chaque poids de texte
+	&.light {
+		font-weight: $font-weight-light;
+	}
+
+	&.regular {
+		font-weight: $font-weight-regular;
+	}
+
+	&.medium {
+		font-weight: $font-weight-medium;
+	}
+
+	&.semibold {
+		font-weight: $font-weight-semibold;
+	}
+
+	&.bold {
+		font-weight: $font-weight-bold;
+	}
+
+	// Définissez les styles pour chaque taille de texte
+	&.small {
+		font-size: $font-size-sm;
+	}
+
+	&.medium {
+		font-size: $font-size-base;
+	}
+
+	&.large {
+		font-size: $font-size-lg;
+	}
+
+	&.xl {
+		font-size: $font-size-xl;
+	}
+
+	&.xxl {
+		font-size: $font-size-2xl;
+	}
+
+	&.xxxl {
+		font-size: $font-size-3xl;
+	}
+}
