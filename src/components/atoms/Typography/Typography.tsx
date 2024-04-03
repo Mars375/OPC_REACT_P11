@@ -4,8 +4,8 @@ import React from "react";
 import styles from "./Typography.module.scss";
 
 interface TypographyProps {
-	tag: keyof JSX.IntrinsicElements;
-	color?: "primary" | "secondary" | "accent";
+	tag?: keyof JSX.IntrinsicElements;
+	color?: "primary" | "secondary" | "white" | "dark";
 	weight?: "light" | "regular" | "medium" | "semibold" | "bold";
 	size?: "small" | "medium" | "large" | "xl" | "xxl" | "xxxl";
 	children?: React.ReactNode;
@@ -13,8 +13,8 @@ interface TypographyProps {
 }
 
 const Typography: React.FC<TypographyProps> = ({
-	tag,
-	color,
+	tag = "span",
+	color = "dark",
 	weight,
 	size,
 	children,

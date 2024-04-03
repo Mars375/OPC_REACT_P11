@@ -17,8 +17,12 @@
 		color: $secondary-color;
 	}
 
-	&.accent {
-		color: $accent-color;
+	&.white {
+		color: $white;
+	}
+
+	&.dark {
+		color: $dark;
 	}
 
 	// Définissez les styles pour chaque poids de texte

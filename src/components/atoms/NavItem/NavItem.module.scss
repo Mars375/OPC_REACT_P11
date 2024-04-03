@@ -1,0 +1,17 @@
+.navItem {
+	/* Styles de base */
+	text-decoration: none;
+	/* Autres styles */
+
+	&.underline:hover {
+		/* Styles au survol */
+		text-decoration: underline;
+		/* Autres styles au survol */
+	}
+
+	&.active {
+		/* Styles pour le lien actif */
+		font-weight: bold;
+		/* Autres styles pour le lien actif */
+	}
+}
