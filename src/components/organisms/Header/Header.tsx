@@ -11,15 +11,14 @@ const Header: React.FC = () => {
 	];
 
 	return (
-		<header>
-			<Picture
-				src={logo}
-				alt='SVG Logo'
-				width='w-52'
-				height='h-16'
-				objectFit='fill'
+		<header className='mb-12 mt-10'>
+			<Picture src={logo} alt='SVG Logo' width='w-52' height='h-16' />
+			<Navigation
+				navLinks={navLinks}
+				underline
+				weight='bold'
+				size='font-size-2xl'
 			/>
-			<Navigation navLinks={navLinks} underline weight='bold' size='xxl' />
 		</header>
 	);
 };

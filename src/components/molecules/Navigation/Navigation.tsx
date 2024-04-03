@@ -14,7 +14,15 @@ interface NavigationProps {
 	navLinks: NavLink[];
 	underline?: boolean;
 	weight?: "light" | "regular" | "medium" | "semibold" | "bold";
-	size?: "small" | "medium" | "large" | "xl" | "xxl" | "xxxl";
+	size?:
+		| "font-size-xs"
+		| "font-size-sm"
+		| "font-size-base"
+		| "font-size-lg"
+		| "font-size-xl"
+		| "font-size-2xl"
+		| "font-size-3xl"
+		| "font-size-custom";
 	color?: "primary" | "secondary" | "white" | "dark";
 }
 

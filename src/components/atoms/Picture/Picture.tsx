@@ -9,6 +9,7 @@ interface PictureProps {
 	width?: WidthType;
 	height?: HeightType;
 	objectFit?: "fill" | "contain" | "cover" | "none" | "scale-down";
+	className?: string;
 }
 
 const Picture: React.FC<PictureProps> = ({
@@ -18,11 +19,15 @@ const Picture: React.FC<PictureProps> = ({
 	width,
 	height,
 	objectFit = "cover",
+	className,
 }) => {
-	const widthClass = width ? styles[width] : "";
-	const heightClass = height ? styles[height] : "";
+	const widthClass = width ? `${width}` : "";
+	const heightClass = height ? `${height}` : "";
+	const roundedClass = rounded ? `rounded-${rounded}` : "";
 
-	const classes = `${styles.picture} ${styles[rounded]} ${widthClass} ${heightClass}`;
+	const classes = `${roundedClass} ${widthClass} ${heightClass} ${
+		className ? className : ""
+	}`;
 
 	return <img src={src} alt={alt} className={classes} style={{ objectFit }} />;
 };

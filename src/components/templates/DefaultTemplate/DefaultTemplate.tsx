@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../../organisms/Header/Header";
+import Footer from "../../organisms/Footer/Footer";
 import "./DefaultTemplate.module.scss";
 
 interface DefaultTemplateProps {
@@ -10,7 +11,8 @@ const DefaultTemplate: React.FC<DefaultTemplateProps> = ({ children }) => {
 	return (
 		<>
 			<Header />
-			{children}
+			<main>{children}</main>
+			<Footer />
 		</>
 	);
 };

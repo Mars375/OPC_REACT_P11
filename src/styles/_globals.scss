@@ -1,0 +1,82 @@
+@import "./variables";
+@import "../pages//NotFoundPage/NotFoundPage.module.scss";
+
+@for $i from 4 through 100 {
+	$w: if($i == auto, auto, #{calc($i / 4)}rem);
+	$w-percent: if(
+		$i == auto or $i == full or $i == screen,
+		$i,
+		#{percentage(calc($i / 100))}
+	);
+
+	$w-string: if($i == auto or $i == full or $i == screen, $w-percent, $w);
+
+	.w-#{$i} {
+		width: $w-string;
+	}
+}
+
+@for $i from 4 through 100 {
+	$h: if($i == auto, auto, #{calc($i / 4)}rem);
+	$h-percent: if(
+		$i == auto or $i == full or $i == screen,
+		$i,
+		#{percentage(calc($i / 100))}
+	);
+
+	$h-string: if($i == auto or $i == full or $i == screen, $h-percent, $h);
+
+	.h-#{$i} {
+		height: $h-string;
+	}
+}
+
+@each $key, $value in $spacing-values {
+	.m-#{$key} {
+		margin: $value;
+	}
+
+	.mt-#{$key} {
+		margin-top: $value;
+	}
+
+	.mb-#{$key} {
+		margin-bottom: $value;
+	}
+
+	.ml-#{$key} {
+		margin-left: $value;
+	}
+
+	.mr-#{$key} {
+		margin-right: $value;
+	}
+}
+
+@each $key, $value in $spacing-values {
+	.p-#{$key} {
+		padding: $value;
+	}
+
+	.pt-#{$key} {
+		padding-top: $value;
+	}
+
+	.pb-#{$key} {
+		padding-bottom: $value;
+	}
+
+	.pl-#{$key} {
+		padding-left: $value;
+	}
+
+	.pr-#{$key} {
+		padding-right: $value;
+	}
+}
+
+@each $key, $value in $font-sizes {
+	.font-size-#{$key} {
+		font-size: $value;
+	}
+}

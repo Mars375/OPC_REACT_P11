@@ -7,7 +7,15 @@ interface TypographyProps {
 	tag?: keyof JSX.IntrinsicElements;
 	color?: "primary" | "secondary" | "white" | "dark";
 	weight?: "light" | "regular" | "medium" | "semibold" | "bold";
-	size?: "small" | "medium" | "large" | "xl" | "xxl" | "xxxl";
+	size?:
+		| "font-size-xs"
+		| "font-size-sm"
+		| "font-size-base"
+		| "font-size-lg"
+		| "font-size-xl"
+		| "font-size-2xl"
+		| "font-size-3xl"
+		| "font-size-custom";
 	children?: React.ReactNode;
 	className?: string;
 }
@@ -24,7 +32,7 @@ const Typography: React.FC<TypographyProps> = ({
 
 	const classes = `${styles.typography} ${color ? styles[color] : ""} ${
 		weight ? styles[weight] : ""
-	} ${size ? styles[size] : ""} ${className}`;
+	} ${size ? size : ""} ${className ? className : ""}`;
 
 	return <Tag className={classes}>{children}</Tag>;
 };

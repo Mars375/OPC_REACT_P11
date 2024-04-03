@@ -13,13 +13,16 @@ $white: #ffffff;
 $dark: #000000;
 
 // Font sizes
-$font-size-xs: 12px;
-$font-size-sm: 14px;
-$font-size-base: 16px;
-$font-size-lg: 18px;
-$font-size-xl: 20px;
-$font-size-2xl: 24px;
-$font-size-3xl: 30px;
+$font-sizes: (
+	xs: 12px,
+	sm: 14px,
+	base: 16px,
+	lg: 18px,
+	xl: 20px,
+	2xl: 24px,
+	3xl: 30px,
+	custom: 18rem,
+);
 
 // Font weights
 $font-weight-light: 300;
@@ -28,19 +31,33 @@ $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
-// Spacing
-$spacing-1: 4px;
-$spacing-2: 8px;
-$spacing-3: 12px;
-$spacing-4: 16px;
-$spacing-5: 20px;
-$spacing-6: 24px;
-$spacing-7: 28px;
-$spacing-8: 32px;
-$spacing-9: 36px;
-$spacing-10: 40px;
-$spacing-11: 44px;
-$spacing-12: 48px;
+$spacing-values: (
+	1: 0.25rem,
+	// 4px
+	2: 0.5rem,
+	// 8px
+	3: 0.75rem,
+	// 12px
+	4: 1rem,
+	// 16px
+	5: 1.25rem,
+	// 20px
+	6: 1.5rem,
+	// 24px
+	7: 1.75rem,
+	// 28px
+	8: 2rem,
+	// 32px
+	9: 2.25rem,
+	// 36px
+	10: 2.5rem,
+	// 40px
+	11: 2.75rem,
+	// 44px
+	12: 3rem,
+	// 48px
+	custom: 8.7rem,
+);
 
 // Border radius
 $border-radius-none: 0;
@@ -153,97 +170,6 @@ $container-max-widths: (
 	top: auto;
 	bottom: auto;
 }
-
-// Variables pour la taille et la largeur de l'image
-$w-4: 1rem; /* 16px */
-$w-5: 1.25rem; /* 20px */
-$w-6: 1.5rem; /* 24px */
-$w-7: 1.75rem; /* 28px */
-$w-8: 2rem; /* 32px */
-$w-9: 2.25rem; /* 36px */
-$w-10: 2.5rem; /* 40px */
-$w-11: 2.75rem; /* 44px */
-$w-12: 3rem; /* 48px */
-$w-14: 3.5rem; /* 56px */
-$w-16: 4rem; /* 64px */
-$w-20: 5rem; /* 80px */
-$w-24: 6rem; /* 96px */
-$w-28: 7rem; /* 112px */
-$w-32: 8rem; /* 128px */
-$w-36: 9rem; /* 144px */
-$w-40: 10rem; /* 160px */
-$w-44: 11rem; /* 176px */
-$w-48: 12rem; /* 192px */
-$w-52: 13rem; /* 208px */
-$w-56: 14rem; /* 224px */
-$w-60: 15rem; /* 240px */
-$w-64: 16rem; /* 256px */
-$w-72: 18rem; /* 288px */
-$w-80: 20rem; /* 320px */
-$w-96: 24rem; /* 384px */
-$w-auto: auto;
-$w-1_2: 50%;
-$w-1_3: 33.333333%;
-$w-2_3: 66.666667%;
-$w-1_4: 25%;
-$w-2_4: 50%;
-$w-3_4: 75%;
-$w-1_5: 20%;
-$w-2_5: 40%;
-$w-3_5: 60%;
-$w-4_5: 80%;
-$w-1_6: 16.666667%;
-$w-2_6: 33.333333%;
-$w-3_6: 50%;
-$w-4_6: 66.666667%;
-$w-5_6: 83.333333%;
-$w-full: 100%;
-$w-screen: 100vw;
-
-$h-4: 1rem; /* 16px */
-$h-5: 1.25rem; /* 20px */
-$h-6: 1.5rem; /* 24px */
-$h-7: 1.75rem; /* 28px */
-$h-8: 2rem; /* 32px */
-$h-9: 2.25rem; /* 36px */
-$h-10: 2.5rem; /* 40px */
-$h-11: 2.75rem; /* 44px */
-$h-12: 3rem; /* 48px */
-$h-14: 3.5rem; /* 56px */
-$h-16: 4rem; /* 64px */
-$h-20: 5rem; /* 80px */
-$h-24: 6rem; /* 96px */
-$h-28: 7rem; /* 112px */
-$h-32: 8rem; /* 128px */
-$h-36: 9rem; /* 144px */
-$h-40: 10rem; /* 160px */
-$h-44: 11rem; /* 176px */
-$h-48: 12rem; /* 192px */
-$h-52: 13rem; /* 208px */
-$h-56: 14rem; /* 224px */
-$h-60: 15rem; /* 240px */
-$h-64: 16rem; /* 256px */
-$h-72: 18rem; /* 288px */
-$h-80: 20rem; /* 320px */
-$h-96: 24rem; /* 384px */
-$h-auto: auto;
-$h-1_2: 50%;
-$h-1_3: 33.333333%;
-$h-2_3: 66.666667%;
-$h-1_4: 25%;
-$h-2_4: 50%;
-$h-3_4: 75%;
-$h-1_5: 20%;
-$h-2_5: 40%;
-$h-3_5: 60%;
-$h-4_5: 80%;
-$h-1_6: 16.666667%;
-$h-2_6: 33.333333%;
-$h-3_6: 50%;
-$h-4_6: 66.666667%;
-$h-5_6: 83.333333%;
-$h-full: 100%;
-$h-screen: 100vh;
 
 // Variables pour les coins arrondis
 $rounded-none: 0;
