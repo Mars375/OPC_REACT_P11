@@ -6,7 +6,7 @@ import Typography from "../../components/atoms/Typography/Typography";
 export default function error() {
 	return (
 		<DefaultTemplate>
-			<div className='mainContainer mt-custom mb-custom'>
+			<div className='mainContainer mt-custom'>
 				<Typography color='primary' weight='bold' size='font-size-custom'>
 					404
 				</Typography>
