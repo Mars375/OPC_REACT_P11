@@ -3,6 +3,7 @@ import React from "react";
 import NavItem from "../../atoms/NavItem/NavItem";
 import Typography from "../../atoms/Typography/Typography";
 import styles from "./Navigation.module.scss";
+import { TypographyProps } from "../../../utils/type";
 
 interface NavLink {
 	link: string;
@@ -13,17 +14,9 @@ interface NavLink {
 interface NavigationProps {
 	navLinks: NavLink[];
 	underline?: boolean;
-	weight?: "light" | "regular" | "medium" | "semibold" | "bold";
-	size?:
-		| "font-size-xs"
-		| "font-size-sm"
-		| "font-size-base"
-		| "font-size-lg"
-		| "font-size-xl"
-		| "font-size-2xl"
-		| "font-size-3xl"
-		| "font-size-custom";
-	color?: "primary" | "secondary" | "white" | "dark";
+	color?: TypographyProps["color"];
+	weight?: TypographyProps["weight"];
+	size?: TypographyProps["size"];
 }
 
 const Navigation: React.FC<NavigationProps> = ({

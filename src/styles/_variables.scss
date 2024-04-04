@@ -21,6 +21,7 @@ $font-sizes: (
 	xl: 20px,
 	2xl: 24px,
 	3xl: 30px,
+	4xl: 48px,
 	custom: 18rem,
 );
 
@@ -59,43 +60,18 @@ $spacing-values: (
 	custom: 8.7rem,
 );
 
-// Border radius
-$border-radius-none: 0;
-$border-radius-sm: 4px;
-$border-radius-md: 8px;
-$border-radius-lg: 12px;
-$border-radius-xl: 16px;
-$border-radius-full: 9999px; // Pour un arrondi complet
-
-// Box shadows
-$box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-$box-shadow-md:
-	0 4px 6px -1px rgba(0, 0, 0, 0.1),
-	0 2px 4px -1px rgba(0, 0, 0, 0.06);
-$box-shadow-lg:
-	0 10px 15px -3px rgba(0, 0, 0, 0.1),
-	0 4px 6px -2px rgba(0, 0, 0, 0.05);
-$box-shadow-xl:
-	0 20px 25px -5px rgba(0, 0, 0, 0.1),
-	0 10px 10px -5px rgba(0, 0, 0, 0.04);
-$box-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-
-// Z-index
-$z-index-dropdown: 1000;
-$z-index-sticky: 1020;
-$z-index-fixed: 1030;
-$z-index-modal-backdrop: 1040;
-$z-index-modal: 1050;
-
-// Breakpoints
-$breakpoint-sm: 640px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
-$breakpoint-xl: 1280px;
-
-// Grid
-$grid-columns: 12;
-$grid-gutter-width: 30px;
+//drop-shadow
+$drop-shadow-values: (
+	small: 0px 4px 6px rgba(0, 0, 0, 0.1),
+	medium: 0px 6px 8px rgba(0, 0, 0, 0.1),
+	large: 0px 8px 10px rgba(0, 0, 0, 0.1),
+	x-large: 0px 10px 12px rgba(0, 0, 0, 0.1),
+	xx-large: 0px 12px 14px rgba(0, 0, 0, 0.1),
+	xxx-large: 0px 14px 16px rgba(0, 0, 0, 0.1),
+	jumbo: 0px 16px 18px rgba(0, 0, 0, 0.1),
+	mega: 0px 18px 20px rgba(0, 0, 0, 0.1),
+	custom: 0px 4px 4px 0px rgba(0, 0, 0, 0.4),
+);
 
 // Container
 $container-max-widths: (
@@ -105,76 +81,42 @@ $container-max-widths: (
 	xl: 1280px,
 );
 
-// Media query mixins
-@mixin media-query-sm {
-	@media (min-width: #{$breakpoint-sm}) {
-		@content;
-	}
-}
-
-@mixin media-query-md {
-	@media (min-width: #{$breakpoint-md}) {
-		@content;
-	}
-}
-
-@mixin media-query-lg {
-	@media (min-width: #{$breakpoint-lg}) {
-		@content;
-	}
-}
-
-@mixin media-query-xl {
-	@media (min-width: #{$breakpoint-xl}) {
-		@content;
-	}
-}
-
-// Utility classes
-%visually-hidden {
-	position: absolute !important;
-	width: 1px !important;
-	height: 1px !important;
-	padding: 0 !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	clip: rect(0, 0, 0, 0) !important;
-	white-space: nowrap !important;
-	border: 0 !important;
-}
-
-.hidden {
-	@extend %visually-hidden;
-}
-
-.sr-only {
-	@extend %visually-hidden;
-}
-
-.inset-x-0 {
-	left: 0;
-	right: 0;
-}
-
-.inset-y-0 {
-	top: 0;
-	bottom: 0;
-}
-
-.inset-x-auto {
-	left: auto;
-	right: auto;
-}
-
-.inset-y-auto {
-	top: auto;
-	bottom: auto;
-}
-
 // Variables pour les coins arrondis
-$rounded-none: 0;
-$rounded-sm: 0.25rem;
-$rounded-md: 0.375rem;
-$rounded-lg: 0.5rem;
-$rounded-xl: 0.75rem;
-$rounded-full: 9999px; // Pour un arrondi complet
+$rounded: (
+	none: 0,
+	sm: 0.25rem,
+	md: 0.375rem,
+	lg: 0.5rem,
+	xl: 0.75rem,
+	full: 9999px,
+);
+
+//Positions
+$positions: (
+	center: (
+		top: 50%,
+		left: 50%,
+		transform: translate(-50%, -50%),
+		text-align: center,
+	),
+	top-left: (
+		top: 0,
+		left: 0,
+		transform: none,
+	),
+	top-right: (
+		top: 0,
+		right: 0,
+		transform: none,
+	),
+	bottom-left: (
+		bottom: 20px,
+		left: 20px,
+		transform: none,
+	),
+	bottom-right: (
+		bottom: 0,
+		right: 0,
+		transform: none,
+	),
+);

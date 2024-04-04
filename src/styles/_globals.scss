@@ -1,33 +1,37 @@
 @import "./variables";
-@import "../pages//NotFoundPage/NotFoundPage.module.scss";
+@import "../components/molecules/ImageWithText.tsx/ImageWithText.module.scss";
 
 @for $i from 4 through 100 {
-	$w: if($i == auto, auto, #{calc($i / 4)}rem);
-	$w-percent: if(
-		$i == auto or $i == full or $i == screen,
-		$i,
-		#{percentage(calc($i / 100))}
-	);
-
-	$w-string: if($i == auto or $i == full or $i == screen, $w-percent, $w);
+	$w: #{calc($i / 4)}rem;
 
 	.w-#{$i} {
-		width: $w-string;
+		width: $w;
+	}
+}
+
+.w {
+	&-full {
+		width: 100%;
+	}
+	&-screen {
+		width: 100vw;
 	}
 }
 
 @for $i from 4 through 100 {
-	$h: if($i == auto, auto, #{calc($i / 4)}rem);
-	$h-percent: if(
-		$i == auto or $i == full or $i == screen,
-		$i,
-		#{percentage(calc($i / 100))}
-	);
-
-	$h-string: if($i == auto or $i == full or $i == screen, $h-percent, $h);
+	$h: #{calc($i / 4)}rem;
 
 	.h-#{$i} {
-		height: $h-string;
+		height: $h;
+	}
+}
+
+.h {
+	&-full {
+		height: 100%;
+	}
+	&-screen {
+		height: 100vh;
 	}
 }
 
@@ -78,5 +82,34 @@
 @each $key, $value in $font-sizes {
 	.font-size-#{$key} {
 		font-size: $value;
+	}
+}
+
+@each $position, $styles in $positions {
+	.absolute--#{$position} {
+		position: absolute;
+		@each $property, $value in $styles {
+			#{$property}: $value;
+		}
+	}
+}
+
+@each $key, $value in $rounded {
+	.rounded-#{$key} {
+		border-radius: $value;
+	}
+}
+
+.relative {
+	position: relative;
+}
+
+.flex {
+	display: flex;
+}
+
+@each $key, $value in $drop-shadow-values {
+	.box-shadow-#{$key} {
+		box-shadow: $value;
 	}
 }

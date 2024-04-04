@@ -2,23 +2,7 @@
 
 import React from "react";
 import styles from "./Typography.module.scss";
-
-interface TypographyProps {
-	tag?: keyof JSX.IntrinsicElements;
-	color?: "primary" | "secondary" | "white" | "dark";
-	weight?: "light" | "regular" | "medium" | "semibold" | "bold";
-	size?:
-		| "font-size-xs"
-		| "font-size-sm"
-		| "font-size-base"
-		| "font-size-lg"
-		| "font-size-xl"
-		| "font-size-2xl"
-		| "font-size-3xl"
-		| "font-size-custom";
-	children?: React.ReactNode;
-	className?: string;
-}
+import { TypographyProps } from "../../../utils/type";
 
 const Typography: React.FC<TypographyProps> = ({
 	tag = "span",

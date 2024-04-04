@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.module.scss";
 import Picture from "../../atoms/Picture/Picture";
 import Navigation from "../../molecules/Navigation/Navigation";
@@ -11,8 +12,10 @@ const Header: React.FC = () => {
 	];
 
 	return (
-		<header className='mb-12 mt-10'>
-			<Picture src={logo} alt='SVG Logo' width='w-52' height='h-16' />
+		<header className='mb-12'>
+			<Link to='/'>
+				<Picture src={logo} alt='SVG Logo' width='w-52' height='h-16' />
+			</Link>
 			<Navigation
 				navLinks={navLinks}
 				underline
