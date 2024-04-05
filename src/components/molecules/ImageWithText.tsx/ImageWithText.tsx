@@ -3,6 +3,7 @@ import Typography from "../../atoms/Typography/Typography";
 import Picture from "../../atoms/Picture/Picture";
 import { WidthType, HeightType } from "../../../utils/enum";
 import { TypographyProps, ImageProps, TextPosition } from "../../../utils/type";
+import styles from "./ImageWithText.module.scss";
 
 interface ImageWithTextProps {
 	imageUrl: string;
@@ -15,8 +16,8 @@ interface ImageWithTextProps {
 	weight?: TypographyProps["weight"];
 	size?: TypographyProps["size"];
 	textPosition?: TextPosition;
-	Imgclass?: string;
 	className?: string;
+	gradient?: string;
 }
 
 const ImageWithText: React.FC<ImageWithTextProps> = ({
@@ -30,10 +31,10 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({
 	size,
 	weight,
 	textPosition = "center",
-	Imgclass,
 	className,
+	gradient,
 }) => {
-	const containerClassName = `ImageWithText absolute--${textPosition}`;
+	const containerClassName = `absolute--${textPosition}`;
 
 	return (
 		<div className={`relative ${className}`}>
@@ -43,8 +44,8 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({
 				width={imageWidth}
 				height={imageHeight}
 				rounded={rounded}
-				className={`${Imgclass}`}
 			/>
+			{gradient && <div className={`h-full w-full ${styles[gradient]}`} />}
 			<Typography
 				tag='p'
 				className={containerClassName}

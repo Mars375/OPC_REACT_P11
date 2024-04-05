@@ -21,7 +21,16 @@ export type TypographyProps = {
 export type ImageProps = {
 	src: string;
 	alt: string;
-	rounded?: "none" | "sm" | "md" | "lg" | "xl" | "full";
+	rounded?:
+		| "none"
+		| "sm"
+		| "md"
+		| "lg"
+		| "xl"
+		| "xxl"
+		| "xxxl"
+		| "custom"
+		| "full";
 	width?: WidthType;
 	height?: HeightType;
 	objectFit?: "fill" | "contain" | "cover" | "none" | "scale-down";

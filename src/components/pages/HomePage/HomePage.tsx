@@ -5,6 +5,7 @@ import hero from "../../../assets/IMG.png";
 import { fetchAllLocations } from "../../../api/locationApi";
 
 import styles from "./HomePage.module.scss";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
 	const [locations, setLocations] = useState<any[]>([]);
@@ -31,27 +32,29 @@ export default function HomePage() {
 				alt="Description de l'image"
 				text='Chez vous, partout et ailleurs'
 				textPosition='center'
-				rounded='md'
+				rounded='xxl'
 				color='white'
 				weight='bold'
 				size='font-size-4xl'
-				Imgclass='filter'
+				className='filter'
 			/>
 			<div className={styles.mainContainer}>
 				{locations &&
 					locations.map((location) => (
-						<ImageWithText
-							imageUrl={location.cover}
-							text={location.title}
-							alt={location.title}
-							textPosition='bottom-left'
-							color='white'
-							weight='bold'
-							size='font-size-lg'
-							Imgclass='filter-2'
-							className='w-80 h-80'
-							rounded='lg'
-						/>
+						<Link to={`/location/${location.id}`} key={location.id}>
+							<ImageWithText
+								imageUrl={location.cover}
+								text={location.title}
+								alt={location.title}
+								textPosition='bottom-left'
+								color='white'
+								weight='bold'
+								size='font-size-lg'
+								className='w-80 h-80'
+								rounded='lg'
+								gradient='gradient'
+							/>
+						</Link>
 					))}
 			</div>
 		</DefaultTemplate>

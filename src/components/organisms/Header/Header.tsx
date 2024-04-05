@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 	];
 
 	return (
-		<header className='mb-12'>
+		<header className='pb-12'>
 			<Link to='/'>
 				<Picture src={logo} alt='SVG Logo' width='w-52' height='h-16' />
 			</Link>

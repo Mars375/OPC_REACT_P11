@@ -1,11 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styles from "./NavItem.module.scss";
 
 interface NavItemProps {
 	link: string;
 	active?: boolean;
 	underline?: boolean;
-	onClick?: () => void;
 	children: React.ReactNode;
 }
 
@@ -13,25 +13,17 @@ const NavItem: React.FC<NavItemProps> = ({
 	link,
 	active,
 	underline = true,
-	onClick,
 	children,
 }) => {
-	const handleClick = () => {
-		if (onClick) {
-			onClick();
-		}
-	};
-
 	return (
-		<a
-			href={link}
-			className={`${styles.navItem} ${active ? styles.active : ""} ${
-				underline ? styles.underline : ""
-			}`}
-			onClick={handleClick}
+		<NavLink
+			to={link}
+			className={({ isActive }) =>
+				isActive ? `${styles.navItem} ${styles.active}` : styles.navItem
+			}
 		>
 			{children}
-		</a>
+		</NavLink>
 	);
 };
 

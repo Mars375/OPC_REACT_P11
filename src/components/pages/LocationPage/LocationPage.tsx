@@ -1,5 +1,6 @@
 import React from "react";
+import DefaultTemplate from "../../templates/DefaultTemplate/DefaultTemplate";
 
 export default function LocationPage() {
-	return <div>LocationPage</div>;
+	return <DefaultTemplate>LocationPage</DefaultTemplate>;
 }
