@@ -1,29 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import DefaultTemplate from "../../templates/DefaultTemplate/DefaultTemplate";
 import ImageWithText from "../../molecules/ImageWithText.tsx/ImageWithText";
 import hero from "../../../assets/IMG.png";
-import { fetchAllLocations } from "../../../api/locationApi";
-
+import { LocationType } from "../../../utils/type";
 import styles from "./HomePage.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 export default function HomePage() {
-	const [locations, setLocations] = useState<any[]>([]);
-
-	useEffect(() => {
-		const fetchLocationData = async () => {
-			try {
-				const data = await fetchAllLocations();
-				setLocations(data);
-			} catch (error) {
-				console.error(
-					"Une erreur s'est produite lors de la récupération des données de location:",
-					error
-				);
-			}
-		};
-		fetchLocationData();
-	}, []);
+	const locations = useLoaderData() as LocationType[];
 
 	return (
 		<DefaultTemplate>
@@ -32,7 +16,7 @@ export default function HomePage() {
 				alt="Description de l'image"
 				text='Chez vous, partout et ailleurs'
 				textPosition='center'
-				rounded='xxl'
+				rounded='md'
 				color='white'
 				weight='bold'
 				size='font-size-4xl'
@@ -40,7 +24,7 @@ export default function HomePage() {
 			/>
 			<div className={styles.mainContainer}>
 				{locations &&
-					locations.map((location) => (
+					locations.map((location: LocationType) => (
 						<Link to={`/location/${location.id}`} key={location.id}>
 							<ImageWithText
 								imageUrl={location.cover}

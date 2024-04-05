@@ -7,10 +7,9 @@
 
 body {
 	padding-top: 2.5rem;
-	display: flex;
-	justify-content: center;
 }
 
 #root > *:not(:is(footer)) {
 	max-width: 1240px;
+	margin: auto;
 }
