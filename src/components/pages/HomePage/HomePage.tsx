@@ -13,7 +13,7 @@ export default function HomePage() {
 	return (
 		<DefaultTemplate>
 			<ImageWithText
-				imageUrl={hero}
+				src={hero}
 				alt="Description de l'image"
 				text='Chez vous, partout et ailleurs'
 				textPosition='center'
@@ -28,7 +28,7 @@ export default function HomePage() {
 					locations.locations.map((location: LocationType) => (
 						<Link to={`/location/${location.id}`} key={location.id}>
 							<ImageWithText
-								imageUrl={location.cover}
+								src={location.cover}
 								text={location.title}
 								alt={location.title}
 								textPosition='bottom-left'

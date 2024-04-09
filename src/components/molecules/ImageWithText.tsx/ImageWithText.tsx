@@ -6,7 +6,7 @@ import { TypographyProps, ImageProps, TextPosition } from "../../../utils/type";
 import styles from "./ImageWithText.module.scss";
 
 interface ImageWithTextProps {
-	imageUrl: string;
+	src: string;
 	alt: string;
 	text: string;
 	imageWidth?: WidthType;
@@ -21,7 +21,7 @@ interface ImageWithTextProps {
 }
 
 const ImageWithText: React.FC<ImageWithTextProps> = ({
-	imageUrl,
+	src,
 	alt,
 	text,
 	imageWidth,
@@ -30,16 +30,16 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({
 	color,
 	size,
 	weight,
-	textPosition = "center",
+	textPosition,
 	className,
 	gradient,
 }) => {
 	const containerClassName = `absolute--${textPosition}`;
 
 	return (
-		<div className={`relative ${className}`}>
+		<div className={`relative ${className} ${styles.container}`}>
 			<Picture
-				src={imageUrl}
+				src={src}
 				alt={alt}
 				width={imageWidth}
 				height={imageHeight}

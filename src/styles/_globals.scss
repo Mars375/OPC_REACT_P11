@@ -113,3 +113,27 @@
 		box-shadow: $value;
 	}
 }
+
+@each $key, $value in $justify-content {
+	.justify-#{$key} {
+		justify-content: $value;
+	}
+}
+
+@each $key, $value in $align-items {
+	.align-#{$key} {
+		align-items: $value;
+	}
+}
+
+@each $key, $value in $flex-direction {
+	.flex-#{$key} {
+		flex-direction: $value;
+	}
+}
+
+@each $key, $value in $gap-values {
+	.gap-#{$key} {
+		gap: $value;
+	}
+}
