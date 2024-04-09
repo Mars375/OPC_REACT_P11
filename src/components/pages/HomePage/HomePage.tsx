@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import DefaultTemplate from "../../templates/DefaultTemplate/DefaultTemplate";
 import ImageWithText from "../../molecules/ImageWithText.tsx/ImageWithText";
 import hero from "../../../assets/IMG.png";
 import { LocationType } from "../../../utils/type";
 import styles from "./HomePage.module.scss";
-import { Link, useLoaderData } from "react-router-dom";
+import LocationsContext from "../../../contexts/LocationsContext";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
-	const locations = useLoaderData() as LocationType[];
+	const locations = useContext(LocationsContext);
 
 	return (
 		<DefaultTemplate>
@@ -24,7 +25,7 @@ export default function HomePage() {
 			/>
 			<div className={styles.mainContainer}>
 				{locations &&
-					locations.map((location: LocationType) => (
+					locations.locations.map((location: LocationType) => (
 						<Link to={`/location/${location.id}`} key={location.id}>
 							<ImageWithText
 								imageUrl={location.cover}
