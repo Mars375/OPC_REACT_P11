@@ -16,6 +16,7 @@ type TagProps = {
 	width?: string;
 	height?: string;
 	children: React.ReactNode;
+	className?: string;
 };
 
 const Tag: React.FC<TagProps> = ({
@@ -25,10 +26,15 @@ const Tag: React.FC<TagProps> = ({
 	height = "h-auto",
 	children,
 	backgroundColor = "bg-primary",
+	className,
 }) => {
-	const className = `rounded-${rounded} text-${color} ${width} ${height} ${backgroundColor} justify-center flex items-center`;
-
-	return <div className={className}>{children}</div>;
+	return (
+		<div
+			className={`rounded-${rounded} text-${color} ${width} ${height} ${backgroundColor} ${className}`}
+		>
+			{children}
+		</div>
+	);
 };
 
 export default Tag;

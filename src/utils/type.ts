@@ -2,7 +2,7 @@ import { WidthType, HeightType } from "./enum";
 
 export type TypographyProps = {
 	tag?: keyof JSX.IntrinsicElements;
-	color?: "primary" | "secondary" | "white" | "dark";
+	color?: "primary" | "secondary" | "light" | "dark";
 	weight?: "light" | "regular" | "medium" | "semibold" | "bold";
 	size?:
 		| "font-size-xs"

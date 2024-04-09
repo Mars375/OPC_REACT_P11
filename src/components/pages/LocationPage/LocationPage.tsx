@@ -70,6 +70,7 @@ export default function LocationPage() {
 							color='light'
 							width='w-tag'
 							height='h-6'
+							className='justify-center flex items-center font-weight-bold font-size-sm'
 						>
 							{tag}
 						</Tag>

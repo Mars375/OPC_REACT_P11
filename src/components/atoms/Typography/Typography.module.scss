@@ -2,46 +2,5 @@
 
 .typography {
 	font-family: $font-family;
-	color: $primary-color; /* Définissez la couleur par défaut */
-	font-weight: $font-weight-regular; /* Définissez le poids de la police par défaut */
 	line-height: 1.5; /* Ajoutez d'autres styles de texte si nécessaire */
-	// Ajoutez d'autres styles de texte si nécessaire
-
-	// Définissez les styles pour chaque couleur de texte
-	&.primary {
-		color: $primary-color;
-	}
-
-	&.secondary {
-		color: $secondary-color;
-	}
-
-	&.white {
-		color: $light;
-	}
-
-	&.dark {
-		color: $dark;
-	}
-
-	// Définissez les styles pour chaque poids de texte
-	&.light {
-		font-weight: $font-weight-light;
-	}
-
-	&.regular {
-		font-weight: $font-weight-regular;
-	}
-
-	&.medium {
-		font-weight: $font-weight-medium;
-	}
-
-	&.semibold {
-		font-weight: $font-weight-semibold;
-	}
-
-	&.bold {
-		font-weight: $font-weight-bold;
-	}
 }

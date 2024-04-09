@@ -63,6 +63,12 @@
 	}
 }
 
+@each $key, $value in $font-weights {
+	.font-weight-#{$key} {
+		font-weight: $value;
+	}
+}
+
 @each $position, $styles in $positions {
 	.absolute--#{$position} {
 		position: absolute;

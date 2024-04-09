@@ -15,7 +15,7 @@ export default function Footer() {
 				className='pb-7'
 				objectFit='contain'
 			/>
-			<Typography tag='p' color='white' size='font-size-2xl'>
+			<Typography tag='p' color='light' size='font-size-2xl'>
 				© 2020 Kasa. All rights reserved
 			</Typography>
 		</footer>

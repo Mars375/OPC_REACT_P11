@@ -14,9 +14,9 @@ const Typography: React.FC<TypographyProps> = ({
 }) => {
 	const Tag = tag as keyof JSX.IntrinsicElements;
 
-	const classes = `${styles.typography} ${color ? styles[color] : ""} ${
-		weight ? styles[weight] : ""
-	} ${size ? size : ""} ${className ? className : ""}`;
+	const classes = `${
+		styles.typography
+	} text-${color} font-weight-${weight} ${size} ${className ? className : ""}`;
 
 	return <Tag className={classes}>{children}</Tag>;
 };

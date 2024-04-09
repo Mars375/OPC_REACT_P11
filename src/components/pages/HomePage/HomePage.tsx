@@ -18,7 +18,7 @@ export default function HomePage() {
 				text='Chez vous, partout et ailleurs'
 				textPosition='center'
 				rounded='md'
-				color='white'
+				color='light'
 				weight='bold'
 				size='font-size-4xl'
 				className='filter'
@@ -32,7 +32,7 @@ export default function HomePage() {
 								text={location.title}
 								alt={location.title}
 								textPosition='bottom-left'
-								color='white'
+								color='light'
 								weight='bold'
 								size='font-size-lg'
 								className='w-custom h-custom'

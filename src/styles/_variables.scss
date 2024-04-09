@@ -7,15 +7,11 @@
 $font-family: Montserrat, Inter, Avenir, Helvetica, Arial, sans-serif;
 
 // Colors
-$primary-color: #ff6060;
-$secondary-color: #f6f6f6;
-$light: #ffffff;
-$dark: #000000;
 $colors: (
-	primary: $primary-color,
-	secondary: $secondary-color,
-	light: $light,
-	dark: $dark,
+	primary: #ff6060,
+	secondary: #f6f6f6,
+	light: #ffffff,
+	dark: #000000,
 );
 
 //width
@@ -127,6 +123,13 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
+$font-weights: (
+	light: $font-weight-light,
+	regular: $font-weight-regular,
+	medium: $font-weight-medium,
+	semibold: $font-weight-semibold,
+	bold: $font-weight-bold,
+);
 
 $spacing-values: (
 	1: 0.25rem,
