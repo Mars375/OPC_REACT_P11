@@ -15,7 +15,7 @@ const Header: React.FC = () => {
 		<header className='pb-12'>
 			<Link to='/'>
 				<h1>
-					<Picture src={logo} alt='SVG Logo' width='w-52' height='h-16' />
+					<Picture src={logo} alt='SVG Logo' />
 				</h1>
 			</Link>
 			<Navigation

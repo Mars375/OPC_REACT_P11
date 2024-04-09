@@ -35,7 +35,7 @@ export default function HomePage() {
 								color='white'
 								weight='bold'
 								size='font-size-lg'
-								className='w-80 h-80'
+								className='w-custom h-custom'
 								rounded='lg'
 								gradient='gradient'
 							/>

@@ -37,7 +37,7 @@ export default function RatingStars({
 	for (let i = 0; i < totalStars; i++) {
 		if (i < rating) {
 			stars.push(
-				<span key={i} className={`${color} ${size}`}>
+				<span key={i} className={`${color} ${size} ${space}`}>
 					<Star fill={color === "primary" ? "#ff6060" : ""} />
 				</span>
 			);

@@ -10,9 +10,10 @@ export default function Footer() {
 			<Picture
 				src={logo}
 				alt='SVG Logo'
-				width='w-32'
+				width='w-footer'
 				height='h-10'
 				className='pb-7'
+				objectFit='contain'
 			/>
 			<Typography tag='p' color='white' size='font-size-2xl'>
 				© 2020 Kasa. All rights reserved

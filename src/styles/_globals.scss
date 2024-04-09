@@ -1,37 +1,15 @@
 @import "./variables";
 @import "../components/molecules/ImageWithText.tsx/ImageWithText.module.scss";
 
-@for $i from 4 through 100 {
-	$w: #{calc($i / 4)}rem;
-
-	.w-#{$i} {
-		width: $w;
+@each $key, $value in $width-values {
+	.w-#{$key} {
+		width: $value;
 	}
 }
 
-.w {
-	&-full {
-		width: 100%;
-	}
-	&-screen {
-		width: 100vw;
-	}
-}
-
-@for $i from 4 through 100 {
-	$h: #{calc($i / 4)}rem;
-
-	.h-#{$i} {
-		height: $h;
-	}
-}
-
-.h {
-	&-full {
-		height: 100%;
-	}
-	&-screen {
-		height: 100vh;
+@each $key, $value in $height-values {
+	.h-#{$key} {
+		height: $value;
 	}
 }
 
@@ -121,7 +99,7 @@
 }
 
 @each $key, $value in $align-items {
-	.align-#{$key} {
+	.items-#{$key} {
 		align-items: $value;
 	}
 }
@@ -135,5 +113,17 @@
 @each $key, $value in $gap-values {
 	.gap-#{$key} {
 		gap: $value;
+	}
+}
+
+@each $key, $value in $colors {
+	.text-#{$key} {
+		color: $value;
+	}
+}
+
+@each $key, $value in $colors {
+	.bg-#{$key} {
+		background-color: $value;
 	}
 }

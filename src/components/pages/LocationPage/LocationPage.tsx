@@ -7,6 +7,7 @@ import Typography from "../../atoms/Typography/Typography";
 import Picture from "../../atoms/Picture/Picture";
 import ImageWithText from "../../molecules/ImageWithText.tsx/ImageWithText";
 import RatingStars from "../../atoms/RatingStars/RatingStars";
+import Tag from "../../atoms/Tag/Tag";
 
 export default function LocationPage() {
 	const [location, setLocation] = useState<LocationType | undefined>(undefined);
@@ -38,6 +39,7 @@ export default function LocationPage() {
 				alt={location?.title || ""}
 				rounded='xxl'
 				className='mb-3'
+				height='h-custom2'
 			/>
 			<div className='flex justify-between'>
 				<div>
@@ -48,19 +50,36 @@ export default function LocationPage() {
 						{location?.location}
 					</Typography>
 				</div>
-				<div>
-					<ImageWithText
-						src={location?.host.picture || ""}
-						alt={location?.host.name || ""}
-						text={location?.host.name || ""}
-						rounded='full'
-						imageWidth='w-16'
-						imageHeight='h-16'
-						color='primary'
-						className='flex flex-row-reverse align-center gap-3'
-					/>
-					<RatingStars rating={Number(location?.rating)} color='primary' />
+				<ImageWithText
+					src={location?.host.picture || ""}
+					alt={location?.host.name || ""}
+					text={location?.host.name || ""}
+					rounded='full'
+					imageWidth='w-16'
+					imageHeight='h-16'
+					color='primary'
+					className='flex flex-row-reverse align-center gap-3 mb-4'
+				/>
+			</div>
+			<div className='flex justify-between'>
+				<div className='flex gap-2'>
+					{location?.tags.map((tag, index) => (
+						<Tag
+							key={index}
+							rounded='lg'
+							color='light'
+							width='w-tag'
+							height='h-6'
+						>
+							{tag}
+						</Tag>
+					))}
 				</div>
+				<RatingStars
+					rating={Number(location?.rating)}
+					color='primary'
+					space='mr-3'
+				/>
 			</div>
 		</DefaultTemplate>
 	);
