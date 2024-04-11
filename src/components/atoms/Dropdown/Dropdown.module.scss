@@ -21,11 +21,3 @@
 		scrollbar-width: none;
 	}
 }
-
-.arrow {
-	transition: transform 0.3s ease-in-out;
-
-	&.open {
-		transform: rotate(180deg);
-	}
-}

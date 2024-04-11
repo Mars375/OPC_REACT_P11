@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { DropdownProps } from "../../../utils/type";
 import styles from "./Dropdown.module.scss";
-import { ReactComponent as Arrow } from "../../../assets/icons/arrow.svg";
+import Arrow from "../Arrow/Arrow";
 
 const Dropdown: React.FC<DropdownProps> = ({
 	locDropdown = true,
@@ -30,7 +30,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 				className={`${titleStyle} rounded-${rounded} flex justify-between cursor-pointer`}
 			>
 				{title}
-				<Arrow className={`${styles.arrow} ${isOpen ? styles.open : ""}`} />
+				<Arrow direction={isOpen ? "down" : "up"} />
 			</h3>
 			<div
 				className={`${styles.dropdownMenu} ${menuStyle} ${
