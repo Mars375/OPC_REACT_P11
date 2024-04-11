@@ -215,8 +215,8 @@ $positions: (
 		transform: none,
 	),
 	bottom-left: (
-		bottom: 20px,
-		left: 20px,
+		bottom: 0,
+		left: 0,
 		transform: none,
 	),
 	bottom-right: (
@@ -225,7 +225,7 @@ $positions: (
 		transform: none,
 	),
 	bottom-center: (
-		bottom: 0.5rem,
+		bottom: 0,
 		left: 50%,
 		transform: translateX(-50%),
 	),

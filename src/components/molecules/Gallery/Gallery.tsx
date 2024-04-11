@@ -80,7 +80,7 @@ const Gallery: React.FC<GalleryProps> = ({
 						color='light'
 						size='font-size-xl'
 						weight='semibold'
-						className='absolute--bottom-center'
+						className='absolute--bottom-center p-2'
 					>
 						{currentImageIndex + 1}/{images.length}
 					</Typography>

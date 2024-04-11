@@ -34,8 +34,13 @@ export default function HomePage() {
 			/>
 			<div className={styles.mainContainer}>
 				{locations &&
-					locations.locations.map((location: LocationType) => (
-						<Link to={`/location/${location.id}`} key={location.id}>
+					locations.locations.map((location: LocationType, index: number) => (
+						<Link
+							to={`/location/${location.id}`}
+							key={location.id}
+							style={{ animationDelay: `${index * 0.2}s` }}
+							className={styles.fadeIn}
+						>
 							<ImageWithText
 								src={location.cover}
 								text={location.title}

@@ -18,7 +18,7 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({
 	className,
 	gradient,
 }) => {
-	const containerClassName = `absolute--${textPosition}`;
+	const containerClassName = `absolute--${textPosition} p-3`;
 
 	return (
 		<div className={`relative ${className} ${styles.imgFilter}`}>
