@@ -297,3 +297,12 @@ $overflow-values: (
 	scroll: scroll,
 	auto: auto,
 );
+
+//align-self
+$align-self: (
+	start: flex-start,
+	end: flex-end,
+	center: center,
+	baseline: baseline,
+	stretch: stretch,
+);

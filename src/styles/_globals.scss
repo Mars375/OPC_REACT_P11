@@ -145,6 +145,12 @@
 	}
 }
 
+@each $key, $value in $align-items {
+	.self-#{$key} {
+		align-self: $value;
+	}
+}
+
 @each $key, $value in $flex-direction {
 	.flex-#{$key} {
 		flex-direction: $value;

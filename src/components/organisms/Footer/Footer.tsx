@@ -12,7 +12,7 @@ export default function Footer() {
 				alt='SVG Logo'
 				width='w-footer'
 				height='h-10'
-				className='pb-7'
+				className='mb-7'
 				objectFit='contain'
 			/>
 			<Typography tag='p' color='light' size='font-size-2xl'>

@@ -25,7 +25,6 @@ export default function LocationPage() {
 			(location) => location.id === id
 		);
 		setLocation(location);
-		console.log(location);
 
 		if (!location) {
 			navigate("/404");

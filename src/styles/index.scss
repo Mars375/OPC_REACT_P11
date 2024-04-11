@@ -1,18 +1,22 @@
 @use "globals";
 @import "./variables";
 
-* {
+/* Reset Styles */
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin-top: 45px;
 	font-family: $font-family;
 	list-style: none;
 }
 
-body {
-	padding-top: 2.5rem;
-}
-
-#root > *:not(:is(footer)) {
-	max-width: 1240px;
-	margin: auto;
+header,
+main {
+	margin: 0px 100px; // Change this to the margin you want
 }

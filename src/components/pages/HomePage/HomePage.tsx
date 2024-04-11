@@ -30,7 +30,7 @@ export default function HomePage() {
 				color='light'
 				weight='bold'
 				size='font-size-4xl'
-				className='filter'
+				className='filter self-center'
 			/>
 			<div className={styles.mainContainer}>
 				{locations &&
