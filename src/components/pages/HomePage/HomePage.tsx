@@ -26,11 +26,11 @@ export default function HomePage() {
 				src={hero}
 				alt="Description de l'image"
 				text='Chez vous, partout et ailleurs'
-				textPosition='center'
+				textClass='absolute-center'
 				rounded='md'
 				color='light'
-				weight='bold'
-				size='font-size-3xl'
+				weight='font-bold'
+				textSize='sm:font-size-2xl lg:font-size-3xl'
 				className='filter self-center'
 			/>
 			<div className={styles.mainContainer}>
@@ -46,10 +46,10 @@ export default function HomePage() {
 								src={location.cover}
 								text={location.title}
 								alt={location.title}
-								textPosition='bottom-left'
+								textClass='absolute-bottom-left p-3 w-full'
 								color='light'
 								weight='bold'
-								size='font-size-lg'
+								textSize='font-size-lg'
 								className='w-custom h-custom'
 								rounded='lg'
 								gradient='gradient'

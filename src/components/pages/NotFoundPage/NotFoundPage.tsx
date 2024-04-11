@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./NotFoundPage.module.scss";
 import DefaultTemplate from "../../templates/DefaultTemplate/DefaultTemplate";
-import Typography from "../../atoms/Typography/Typography";
+import { Typography } from "../../atoms/";
 
 import styles from "./NotFoundPage.module.scss";
 

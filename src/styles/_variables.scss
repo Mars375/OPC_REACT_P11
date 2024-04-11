@@ -107,29 +107,30 @@ $height-values: (
 
 // Font sizes
 $font-sizes: (
-	xs: 12px,
-	sm: 14px,
-	base: 16px,
-	lg: 18px,
-	xl: 20px,
-	2xl: 24px,
-	3xl: 30px,
-	4xl: 48px,
+	xs: 0.75rem,
+	// 12px
+	sm: 0.875rem,
+	// 14px
+	base: 1rem,
+	// 16px
+	lg: 1.125rem,
+	// 18px
+	xl: 1.25rem,
+	// 20px
+	"2xl": 1.5rem,
+	// 24px
+	"3xl": 1.875rem,
+	// 30px
 	custom: 18rem,
 );
 
 // Font weights
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
 $font-weights: (
-	light: $font-weight-light,
-	regular: $font-weight-regular,
-	medium: $font-weight-medium,
-	semibold: $font-weight-semibold,
-	bold: $font-weight-bold,
+	"light": 300,
+	"regular": 400,
+	"medium": 500,
+	"semibold": 600,
+	"bold": 700,
 );
 
 // Line heights
@@ -302,4 +303,13 @@ $align-self: (
 	center: center,
 	baseline: baseline,
 	stretch: stretch,
+);
+
+//breakpoints
+$breakpoints: (
+	"xs": 0,
+	"sm": 640px,
+	"md": 768px,
+	"lg": 1024px,
+	"xl": 1280px,
 );

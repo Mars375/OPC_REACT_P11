@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Picture from "../../atoms/Picture/Picture";
 import Arrow from "../../atoms/Arrow/Arrow";
 import styles from "./Gallery.module.scss";
-import Typography from "../../atoms/Typography/Typography";
-import FadeLoader from "../../atoms/FadeLoader/FadeLoader";
+import { Typography, FadeLoader } from "../../atoms/";
 
 interface Image {
 	src: string;

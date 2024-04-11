@@ -7,18 +7,16 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({
 	src,
 	alt,
 	text,
-	imageWidth,
-	rounded,
-	imageHeight,
-	color,
-	size,
-	weight,
-	textPosition,
-	className,
-	gradient,
+	imageWidth = "w-full",
+	imageHeight = "h-full",
+	rounded = "none",
+	color = "light",
+	weight = "regular",
+	textSize = "font-size-md",
+	textClass = "",
+	className = "",
+	gradient = "",
 }) => {
-	const containerClassName = `absolute--${textPosition} p-3 w-full`;
-
 	return (
 		<div className={`relative ${className} ${styles.imgFilter}`}>
 			<Picture
@@ -31,9 +29,9 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({
 			{gradient && <div className={`h-full w-full ${styles[gradient]}`} />}
 			<Typography
 				tag='p'
-				className={containerClassName}
+				className={textClass}
 				color={color}
-				size={size}
+				size={textSize}
 				weight={weight}
 			>
 				{text}

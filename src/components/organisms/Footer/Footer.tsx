@@ -1,6 +1,6 @@
 import React from "react";
 import Picture from "../../atoms/Picture/Picture";
-import Typography from "../../atoms/Typography/Typography";
+import { Typography } from "../../atoms/";
 import logo from "../../../assets/LOGO (1).png";
 import "./Footer.module.scss";
 

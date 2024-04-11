@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { DropdownProps } from "../../../utils/type";
 import styles from "./Dropdown.module.scss";
-import Arrow from "../../atoms/Arrow/Arrow";
-import Typography from "../../atoms/Typography/Typography";
+import { Typography, Arrow } from "../../atoms/";
 
 const Dropdown: React.FC<DropdownProps> = ({
 	locDropdown = true,

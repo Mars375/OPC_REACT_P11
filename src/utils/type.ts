@@ -1,19 +1,8 @@
-import { WidthType, HeightType, MinWidthType, MaxWidthType } from "./enum";
-
 export type TypographyProps = {
 	tag?: keyof JSX.IntrinsicElements;
-	color?: "primary" | "secondary" | "light" | "dark";
-	weight?: "light" | "regular" | "medium" | "semibold" | "bold";
-	size?:
-		| "font-size-xs"
-		| "font-size-sm"
-		| "font-size-md"
-		| "font-size-lg"
-		| "font-size-xl"
-		| "font-size-2xl"
-		| "font-size-3xl"
-		| "font-size-responsive"
-		| "font-size-custom";
+	color?: string;
+	weight?: string;
+	size?: string;
 	children?: React.ReactNode;
 	className?: string;
 };
@@ -21,28 +10,12 @@ export type TypographyProps = {
 export type ImageProps = {
 	src: string;
 	alt: string;
-	rounded?:
-		| "none"
-		| "sm"
-		| "md"
-		| "lg"
-		| "xl"
-		| "xxl"
-		| "xxxl"
-		| "custom"
-		| "full";
-	width?: WidthType;
-	height?: HeightType;
-	objectFit?: "fill" | "contain" | "cover" | "none" | "scale-down";
+	rounded?: string;
+	width?: string;
+	height?: string;
+	objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
 	className?: string;
 };
-
-export type TextPosition =
-	| "center"
-	| "top-left"
-	| "top-right"
-	| "bottom-left"
-	| "bottom-right";
 
 export type LocationType = {
 	id: string;
@@ -61,20 +34,11 @@ export type LocationType = {
 };
 
 export type TagProps = {
-	rounded?:
-		| "none"
-		| "sm"
-		| "md"
-		| "lg"
-		| "xl"
-		| "xxl"
-		| "xxxl"
-		| "custom"
-		| "full";
-	color?: "primary" | "secondary" | "light" | "dark";
-	backgroundColor?: "primary" | "secondary" | "light" | "dark";
-	minWidth?: MinWidthType;
-	height?: HeightType;
+	rounded?: string;
+	color?: string;
+	backgroundColor?: string;
+	minWidth?: string;
+	height?: string;
 	children: React.ReactNode;
 	className?: string;
 };
@@ -85,7 +49,7 @@ export type DropdownProps = {
 	option: string | string[];
 	titleStyle?: string;
 	menuStyle?: string;
-	maxWidth?: MaxWidthType;
+	maxWidth?: string;
 	rounded?:
 		| "none"
 		| "sm"
@@ -103,13 +67,27 @@ export type ImageWithTextProps = {
 	src: string;
 	alt: string;
 	text: string;
-	imageWidth?: WidthType;
-	imageHeight?: HeightType;
-	rounded?: ImageProps["rounded"];
-	color?: TypographyProps["color"];
-	weight?: TypographyProps["weight"];
-	size?: TypographyProps["size"];
-	textPosition?: TextPosition;
+	imageWidth?: string;
+	imageHeight?: string;
+	rounded?: string;
+	color?: string;
+	weight?: string;
+	textSize?: string;
+	textClass?: string;
 	className?: string;
 	gradient?: string;
+};
+
+type NavLink = {
+	link: string;
+	text: string;
+	underline?: boolean;
+};
+
+export type NavigationProps = {
+	navLinks: NavLink[];
+	underline?: boolean;
+	color?: string;
+	weight?: string;
+	textSize?: string;
 };

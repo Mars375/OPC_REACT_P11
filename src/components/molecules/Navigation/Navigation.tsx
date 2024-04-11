@@ -1,37 +1,22 @@
 // Navigation.tsx
 import React from "react";
-import NavItem from "../../atoms/NavItem/NavItem";
-import Typography from "../../atoms/Typography/Typography";
+import { Typography, NavItem } from "../../atoms/";
 import styles from "./Navigation.module.scss";
-import { TypographyProps } from "../../../utils/type";
-
-interface NavLink {
-	link: string;
-	text: string;
-	underline?: boolean;
-}
-
-interface NavigationProps {
-	navLinks: NavLink[];
-	underline?: boolean;
-	color?: TypographyProps["color"];
-	weight?: TypographyProps["weight"];
-	size?: TypographyProps["size"];
-}
+import { NavigationProps } from "../../../utils/type";
 
 const Navigation: React.FC<NavigationProps> = ({
 	navLinks,
 	underline = false,
 	weight,
-	size,
+	textSize,
 	color,
 }) => {
 	return (
 		<nav className={styles.navigation}>
-			<ul>
+			<ul className='xs:gap-7 lg:gap-14'>
 				{navLinks.map((link, index) => (
 					<NavItem key={index} link={link.link} underline={underline}>
-						<Typography color={color} weight={weight} size={size}>
+						<Typography color={color} weight={weight} size={textSize}>
 							{link.text}
 						</Typography>
 					</NavItem>

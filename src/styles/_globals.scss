@@ -88,7 +88,7 @@
 }
 
 @each $key, $value in $font-weights {
-	.font-weight-#{$key} {
+	.font-#{$key} {
 		font-weight: $value;
 	}
 }
@@ -101,7 +101,7 @@
 
 // Position classes
 @each $position, $styles in $positions {
-	.absolute--#{$position} {
+	.absolute-#{$position} {
 		position: absolute;
 		@each $property, $value in $styles {
 			#{$property}: $value;
@@ -179,5 +179,48 @@
 @each $key, $value in $colors {
 	.bg-#{$key} {
 		background-color: $value;
+	}
+}
+
+// Media query
+@each $breakpoint, $min-width in $breakpoints {
+	@media (min-width: $min-width) {
+		.#{$breakpoint}\:text-uppercase {
+			text-transform: uppercase;
+		}
+		//font-size
+		@each $key, $value in $font-sizes {
+			.#{$breakpoint}\:font-size-#{$key} {
+				font-size: $value;
+			}
+		}
+
+		//font-weight
+		@each $key, $value in $font-weights {
+			.#{$breakpoint}\:font-#{$key} {
+				font-weight: $value;
+			}
+		}
+
+		//gap
+		@each $key, $value in $gap-values {
+			.#{$breakpoint}\:gap-#{$key} {
+				gap: $value;
+			}
+
+			//width
+			@each $key, $value in $width-values {
+				.#{$breakpoint}\:w-#{$key} {
+					width: $value;
+				}
+			}
+
+			//height
+			@each $key, $value in $height-values {
+				.#{$breakpoint}\:h-#{$key} {
+					height: $value;
+				}
+			}
+		}
 	}
 }

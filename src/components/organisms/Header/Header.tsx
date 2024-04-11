@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Header.module.scss";
-import Picture from "../../atoms/Picture/Picture";
-import Navigation from "../../molecules/Navigation/Navigation";
+import { Picture } from "../../atoms/";
+import { Navigation } from "../../molecules/";
 import logo from "../../../assets/LOGO.png";
+
+import "./Header.module.scss";
 
 const Header: React.FC = () => {
 	const navLinks = [
@@ -14,15 +15,15 @@ const Header: React.FC = () => {
 	return (
 		<header className='pb-12'>
 			<Link to='/'>
-				<h1>
+				<h1 className='xs:w-36 xs:h-12'>
 					<Picture src={logo} alt='SVG Logo' />
 				</h1>
 			</Link>
 			<Navigation
 				navLinks={navLinks}
 				underline
-				weight='bold'
-				size='font-size-2xl'
+				weight='xs:font-medium lg:font-bold'
+				textSize='sm:font-size-xs lg:font-size-2xl'
 			/>
 		</header>
 	);
