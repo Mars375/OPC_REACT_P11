@@ -1,0 +1,23 @@
+.dropdown {
+	flex: 1 0 auto;
+	position: relative;
+}
+
+.dropdownMenu {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.3s ease-in-out;
+	font-size: large;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	&.open {
+		max-height: 250px;
+		overflow-y: auto;
+		scrollbar-width: none;
+	}
+}

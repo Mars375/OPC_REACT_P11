@@ -1,9 +1,29 @@
 @import "./variables";
 @import "../components/molecules/ImageWithText.tsx/ImageWithText.module.scss";
 
+// Width classes
+@each $key, $value in $width-values {
+	.max-w-#{$key} {
+		max-width: $value;
+	}
+}
+
+@each $key, $value in $width-values {
+	.min-w-#{$key} {
+		min-width: $value;
+	}
+}
+
 @each $key, $value in $width-values {
 	.w-#{$key} {
 		width: $value;
+	}
+}
+
+// Height classes
+@each $key, $value in $height-values {
+	.min-h-#{$key} {
+		min-height: $value;
 	}
 }
 
@@ -13,6 +33,7 @@
 	}
 }
 
+// Spacing classes
 @each $key, $value in $spacing-values {
 	.m-#{$key} {
 		margin: $value;
@@ -57,6 +78,7 @@
 	}
 }
 
+// Font classes
 @each $key, $value in $font-sizes {
 	.font-size-#{$key} {
 		font-size: $value;
@@ -69,6 +91,13 @@
 	}
 }
 
+@each $key, $value in $line-heights {
+	.line-height-#{$key} {
+		line-height: $value;
+	}
+}
+
+// Position classes
 @each $position, $styles in $positions {
 	.absolute--#{$position} {
 		position: absolute;
@@ -78,12 +107,14 @@
 	}
 }
 
+// Rounded classes
 @each $key, $value in $rounded {
 	.rounded-#{$key} {
 		border-radius: $value;
 	}
 }
 
+// Other utility classes
 .relative {
 	position: relative;
 }
@@ -122,6 +153,7 @@
 	}
 }
 
+// Color classes
 @each $key, $value in $colors {
 	.text-#{$key} {
 		color: $value;

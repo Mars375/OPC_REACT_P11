@@ -1,4 +1,4 @@
-import { WidthType, HeightType } from "./enum";
+import { WidthType, HeightType, MinWidthType, MaxWidthType } from "./enum";
 
 export type TypographyProps = {
 	tag?: keyof JSX.IntrinsicElements;
@@ -58,4 +58,43 @@ export type LocationType = {
 	location: string;
 	equipments: string[];
 	tags: string[];
+};
+
+export type TagProps = {
+	rounded?:
+		| "none"
+		| "sm"
+		| "md"
+		| "lg"
+		| "xl"
+		| "xxl"
+		| "xxxl"
+		| "custom"
+		| "full";
+	color?: "primary" | "secondary" | "light" | "dark";
+	backgroundColor?: "primary" | "secondary" | "light" | "dark";
+	minWidth?: MinWidthType;
+	height?: HeightType;
+	children: React.ReactNode;
+	className?: string;
+};
+
+export type DropdownProps = {
+	locDropdown?: boolean;
+	title: string;
+	option: string | string[];
+	titleStyle?: string;
+	menuStyle?: string;
+	maxWidth?: MaxWidthType;
+	rounded?:
+		| "none"
+		| "sm"
+		| "md"
+		| "lg"
+		| "xl"
+		| "xxl"
+		| "xxxl"
+		| "custom"
+		| "full";
+	className?: string;
 };

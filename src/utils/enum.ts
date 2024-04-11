@@ -1,4 +1,4 @@
-export enum WidthSize {
+enum WidthSize {
 	"w-1" = "w-1",
 	"w-2" = "w-2",
 	"w-3" = "w-3",
@@ -16,6 +16,7 @@ export enum WidthSize {
 	"w-15" = "w-15",
 	"w-16" = "w-16",
 	"w-tag" = "w-tag",
+	"w-dropown" = "w-dropdown",
 	"w-footer" = "w-footer",
 	"w-custom" = "w-custom",
 	"w-custom2" = "w-custom2",
@@ -24,7 +25,7 @@ export enum WidthSize {
 	"w-screen" = "w-screen",
 }
 
-export enum HeightSize {
+enum HeightSize {
 	"h-1" = "h-1",
 	"h-2" = "h-2",
 	"h-3" = "h-3",
@@ -48,5 +49,85 @@ export enum HeightSize {
 	"h-screen" = "h-screen",
 }
 
+enum MinWidthSize {
+	"min-w-1" = "min-w-1",
+	"min-w-2" = "min-w-2",
+	"min-w-3" = "min-w-3",
+	"min-w-4" = "min-w-4",
+	"min-w-5" = "min-w-5",
+	"min-w-6" = "min-w-6",
+	"min-w-7" = "min-w-7",
+	"min-w-8" = "min-w-8",
+	"min-w-9" = "min-w-9",
+	"min-w-10" = "min-w-10",
+	"min-w-11" = "min-w-11",
+	"min-w-12" = "min-w-12",
+	"min-w-13" = "min-w-13",
+	"min-w-14" = "min-w-14",
+	"min-w-15" = "min-w-15",
+	"min-w-16" = "min-w-16",
+	"min-w-dropdown" = "min-w-dropdown",
+	"min-w-tag" = "min-w-tag",
+	"min-w-footer" = "min-w-footer",
+	"min-w-custom" = "min-w-custom",
+	"min-w-custom2" = "min-w-custom2",
+	"min-w-auto" = "min-w-auto",
+	"min-w-full" = "min-w-full",
+	"min-w-screen" = "min-w-screen",
+}
+
+enum MaxWidthSize {
+	"max-w-1" = "max-w-1",
+	"max-w-2" = "max-w-2",
+	"max-w-3" = "max-w-3",
+	"max-w-4" = "max-w-4",
+	"max-w-5" = "max-w-5",
+	"max-w-6" = "max-w-6",
+	"max-w-7" = "max-w-7",
+	"max-w-8" = "max-w-8",
+	"max-w-9" = "max-w-9",
+	"max-w-10" = "max-w-10",
+	"max-w-11" = "max-w-11",
+	"max-w-12" = "max-w-12",
+	"max-w-13" = "max-w-13",
+	"max-w-14" = "max-w-14",
+	"max-w-15" = "max-w-15",
+	"max-w-16" = "max-w-16",
+	"max-w-dropdown" = "max-w-dropdown",
+	"max-w-tag" = "max-w-tag",
+	"max-w-custom" = "max-w-custom",
+	"max-w-custom2" = "max-w-custom2",
+	"max-w-auto" = "max-w-auto",
+	"max-w-full" = "max-w-full",
+	"max-w-screen" = "max-w-screen",
+}
+
+enum MinHeightSize {
+	"min-h-1" = "min-h-1",
+	"min-h-2" = "min-h-2",
+	"min-h-3" = "min-h-3",
+	"min-h-4" = "min-h-4",
+	"min-h-5" = "min-h-5",
+	"min-h-6" = "min-h-6",
+	"min-h-7" = "min-h-7",
+	"min-h-8" = "min-h-8",
+	"min-h-9" = "min-h-9",
+	"min-h-10" = "min-h-10",
+	"min-h-11" = "min-h-11",
+	"min-h-12" = "min-h-12",
+	"min-h-13" = "min-h-13",
+	"min-h-14" = "min-h-14",
+	"min-h-15" = "min-h-15",
+	"min-h-16" = "min-h-16",
+	"min-h-custom" = "min-h-custom",
+	"min-h-custom2" = "min-h-custom2",
+	"min-h-auto" = "min-h-auto",
+	"min-h-full" = "min-h-full",
+	"min-h-screen" = "min-h-screen",
+}
+
+export type MaxWidthType = keyof typeof MaxWidthSize;
+export type MinWidthType = keyof typeof MinWidthSize;
+export type MinHeightType = keyof typeof MinHeightSize;
 export type HeightType = keyof typeof HeightSize;
 export type WidthType = keyof typeof WidthSize;

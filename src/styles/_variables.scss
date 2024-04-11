@@ -52,6 +52,8 @@ $width-values: (
 	// 115px
 	footer: 6.5rem,
 	//122px
+	dropdown: 36.375rem,
+	//582px
 	custom: 21.25rem,
 	//340px
 	custom2: 26rem,
@@ -131,6 +133,16 @@ $font-weights: (
 	bold: $font-weight-bold,
 );
 
+// Line heights
+$line-heights: (
+	none: 1,
+	tight: 1.25,
+	base: 1.5,
+	loose: 2,
+	custom: 26px,
+);
+
+// Spacing
 $spacing-values: (
 	1: 0.25rem,
 	// 4px
@@ -156,7 +168,9 @@ $spacing-values: (
 	// 44px
 	12: 3rem,
 	// 48px
+	dropdown: 250px,
 	custom: 8.7rem,
+	// 139px
 );
 
 //drop-shadow
@@ -284,4 +298,8 @@ $gap-values: (
 	// 44px
 	12: 3rem,
 	// 48px
+	13: 3.25rem,
+	// 52px
+	14: 3.5rem,
+	// 56px
 );

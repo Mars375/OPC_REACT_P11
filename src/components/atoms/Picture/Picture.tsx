@@ -10,15 +10,14 @@ const Picture: React.FC<ImageProps> = ({
 	objectFit = "cover",
 	className,
 }) => {
-	const widthClass = width ? `${width}` : "";
-	const heightClass = height ? `${height}` : "";
-	const roundedClass = rounded ? `rounded-${rounded}` : "";
-
-	const classes = `${roundedClass} ${widthClass} ${heightClass} ${
-		className ? className : ""
-	}`;
-
-	return <img src={src} alt={alt} className={classes} style={{ objectFit }} />;
+	return (
+		<img
+			src={src}
+			alt={alt}
+			className={`rounded-${rounded} ${width} ${height} ${className}`}
+			style={{ objectFit }}
+		/>
+	);
 };
 
 export default Picture;

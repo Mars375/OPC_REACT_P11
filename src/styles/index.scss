@@ -1,9 +1,11 @@
 @use "globals";
+@import "./variables";
 
 * {
 	margin: 0;
 	padding: 0;
-	font-family: Montserrat;
+	font-family: $font-family;
+	list-style: none;
 }
 
 body {

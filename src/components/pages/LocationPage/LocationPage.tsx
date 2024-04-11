@@ -8,6 +8,7 @@ import Picture from "../../atoms/Picture/Picture";
 import ImageWithText from "../../molecules/ImageWithText.tsx/ImageWithText";
 import RatingStars from "../../atoms/RatingStars/RatingStars";
 import Tag from "../../atoms/Tag/Tag";
+import Dropdown from "../../atoms/Dropdown/Dropdown";
 
 export default function LocationPage() {
 	const [location, setLocation] = useState<LocationType | undefined>(undefined);
@@ -28,8 +29,6 @@ export default function LocationPage() {
 		if (!location) {
 			navigate("/404");
 		}
-
-		console.log(location);
 	}, [id, locationsContext, navigate]);
 
 	return (
@@ -68,9 +67,9 @@ export default function LocationPage() {
 							key={index}
 							rounded='lg'
 							color='light'
-							width='w-tag'
+							minWidth='min-w-tag'
 							height='h-6'
-							className='justify-center flex items-center font-weight-bold font-size-sm'
+							className='justify-center flex items-center font-weight-bold font-size-sm pr-4 pl-4'
 						>
 							{tag}
 						</Tag>
@@ -81,6 +80,10 @@ export default function LocationPage() {
 					color='primary'
 					space='mr-3'
 				/>
+			</div>
+			<div className='flex justify-between gap-14 mt-6 mb-12'>
+				<Dropdown title='Description' option={location?.description || []} />
+				<Dropdown title='Equipements' option={location?.equipments || []} />
 			</div>
 		</DefaultTemplate>
 	);
