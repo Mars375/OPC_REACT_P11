@@ -1,7 +1,11 @@
-import React from "react";
+import React, { ImgHTMLAttributes } from "react";
 import { ImageProps } from "../../../utils/type";
 
-const Picture: React.FC<ImageProps> = ({
+interface PictureProps extends ImageProps {
+	onLoad?: ImgHTMLAttributes<HTMLImageElement>["onLoad"];
+}
+
+const Picture: React.FC<PictureProps> = ({
 	src,
 	alt,
 	rounded = "none",
@@ -9,6 +13,7 @@ const Picture: React.FC<ImageProps> = ({
 	height = "h-full",
 	objectFit = "cover",
 	className,
+	onLoad,
 }) => {
 	return (
 		<img
@@ -16,6 +21,7 @@ const Picture: React.FC<ImageProps> = ({
 			alt={alt}
 			className={`rounded-${rounded} ${width} ${height} ${className}`}
 			style={{ objectFit }}
+			onLoad={onLoad}
 		/>
 	);
 };

@@ -1,24 +1,8 @@
 import React from "react";
 import Typography from "../../atoms/Typography/Typography";
 import Picture from "../../atoms/Picture/Picture";
-import { WidthType, HeightType } from "../../../utils/enum";
-import { TypographyProps, ImageProps, TextPosition } from "../../../utils/type";
 import styles from "./ImageWithText.module.scss";
-
-interface ImageWithTextProps {
-	src: string;
-	alt: string;
-	text: string;
-	imageWidth?: WidthType;
-	imageHeight?: HeightType;
-	rounded?: ImageProps["rounded"];
-	color?: TypographyProps["color"];
-	weight?: TypographyProps["weight"];
-	size?: TypographyProps["size"];
-	textPosition?: TextPosition;
-	className?: string;
-	gradient?: string;
-}
+import { ImageWithTextProps } from "../../../utils/type";
 
 const ImageWithText: React.FC<ImageWithTextProps> = ({
 	src,
@@ -37,7 +21,7 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({
 	const containerClassName = `absolute--${textPosition}`;
 
 	return (
-		<div className={`relative ${className} ${styles.container}`}>
+		<div className={`relative ${className} ${styles.imgFilter}`}>
 			<Picture
 				src={src}
 				alt={alt}

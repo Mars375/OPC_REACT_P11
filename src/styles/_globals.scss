@@ -1,5 +1,4 @@
 @import "./variables";
-@import "../components/molecules/ImageWithText.tsx/ImageWithText.module.scss";
 
 // Width classes
 @each $key, $value in $width-values {
@@ -123,6 +122,10 @@
 	display: flex;
 }
 
+.filter > img {
+	filter: brightness(0.5);
+}
+
 @each $key, $value in $drop-shadow-values {
 	.box-shadow-#{$key} {
 		box-shadow: $value;
@@ -150,6 +153,13 @@
 @each $key, $value in $gap-values {
 	.gap-#{$key} {
 		gap: $value;
+	}
+}
+
+// overflow classes
+@each $key, $value in $overflow-values {
+	.overflow-#{$key} {
+		overflow: $value;
 	}
 }
 

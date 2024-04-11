@@ -4,11 +4,11 @@ import DefaultTemplate from "../../templates/DefaultTemplate/DefaultTemplate";
 import LocationsContext from "../../../contexts/LocationsContext";
 import { LocationType } from "../../../utils/type";
 import Typography from "../../atoms/Typography/Typography";
-import Picture from "../../atoms/Picture/Picture";
 import ImageWithText from "../../molecules/ImageWithText/ImageWithText";
 import RatingStars from "../../molecules/RatingStars/RatingStars";
 import Tag from "../../atoms/Tag/Tag";
 import Dropdown from "../../atoms/Dropdown/Dropdown";
+import Gallery from "../../molecules/Gallery/Gallery";
 
 export default function LocationPage() {
 	const [location, setLocation] = useState<LocationType | undefined>(undefined);
@@ -25,21 +25,22 @@ export default function LocationPage() {
 			(location) => location.id === id
 		);
 		setLocation(location);
+		console.log(location);
 
 		if (!location) {
 			navigate("/404");
 		}
 	}, [id, locationsContext, navigate]);
 
+	const images =
+		location?.pictures.map((picture) => ({
+			src: picture,
+			alt: location.title,
+		})) || [];
+
 	return (
 		<DefaultTemplate>
-			<Picture
-				src={location?.cover || ""}
-				alt={location?.title || ""}
-				rounded='xxl'
-				className='mb-3'
-				height='h-custom2'
-			/>
+			<Gallery images={images} />
 			<div className='flex justify-between'>
 				<div>
 					<Typography tag='h2' color='primary' size='font-size-3xl'>
@@ -57,7 +58,7 @@ export default function LocationPage() {
 					imageWidth='w-16'
 					imageHeight='h-16'
 					color='primary'
-					className='flex flex-row-reverse align-center gap-3 mb-4'
+					className='flex flex-row-reverse items-center gap-3 mb-4'
 				/>
 			</div>
 			<div className='flex justify-between'>

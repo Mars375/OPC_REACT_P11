@@ -98,3 +98,18 @@ export type DropdownProps = {
 		| "full";
 	className?: string;
 };
+
+export type ImageWithTextProps = {
+	src: string;
+	alt: string;
+	text: string;
+	imageWidth?: WidthType;
+	imageHeight?: HeightType;
+	rounded?: ImageProps["rounded"];
+	color?: TypographyProps["color"];
+	weight?: TypographyProps["weight"];
+	size?: TypographyProps["size"];
+	textPosition?: TextPosition;
+	className?: string;
+	gradient?: string;
+};

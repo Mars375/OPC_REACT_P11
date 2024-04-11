@@ -243,6 +243,11 @@ $positions: (
 		right: 0,
 		transform: none,
 	),
+	bottom-center: (
+		bottom: 0.5rem,
+		left: 50%,
+		transform: translateX(-50%),
+	),
 );
 
 // justify-content
@@ -302,4 +307,12 @@ $gap-values: (
 	// 52px
 	14: 3.5rem,
 	// 56px
+);
+
+//overflow
+$overflow-values: (
+	visible: visible,
+	hidden: hidden,
+	scroll: scroll,
+	auto: auto,
 );
