@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import DefaultTemplate from "../../templates/DefaultTemplate/DefaultTemplate";
-import ImageWithText from "../../molecules/ImageWithText.tsx/ImageWithText";
+import ImageWithText from "../../molecules/ImageWithText/ImageWithText";
 import hero from "../../../assets/IMG.png";
 import { LocationType } from "../../../utils/type";
 import styles from "./HomePage.module.scss";

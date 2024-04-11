@@ -5,8 +5,8 @@ import LocationsContext from "../../../contexts/LocationsContext";
 import { LocationType } from "../../../utils/type";
 import Typography from "../../atoms/Typography/Typography";
 import Picture from "../../atoms/Picture/Picture";
-import ImageWithText from "../../molecules/ImageWithText.tsx/ImageWithText";
-import RatingStars from "../../atoms/RatingStars/RatingStars";
+import ImageWithText from "../../molecules/ImageWithText/ImageWithText";
+import RatingStars from "../../molecules/RatingStars/RatingStars";
 import Tag from "../../atoms/Tag/Tag";
 import Dropdown from "../../atoms/Dropdown/Dropdown";
 
