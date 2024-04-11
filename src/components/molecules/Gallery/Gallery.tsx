@@ -57,31 +57,35 @@ const Gallery: React.FC<GalleryProps> = ({
 					/>
 				))}
 			</div>
-			<div className={styles.rightArrow}>
-				<Arrow
-					direction='right'
-					width={47}
-					height={80}
-					onClick={handleRightArrowClick}
-				/>
-			</div>
-			<div className={styles.leftArrow}>
-				<Arrow
-					direction='left'
-					width={47}
-					height={80}
-					onClick={handleLeftArrowClick}
-				/>
-			</div>
-			<Typography
-				tag='p'
-				color='light'
-				size='font-size-xl'
-				weight='semibold'
-				className='absolute--bottom-center'
-			>
-				{currentImageIndex + 1}/{images.length}
-			</Typography>
+			{images && images.length > 1 && (
+				<>
+					<div className={styles.rightArrow}>
+						<Arrow
+							direction='right'
+							width={47}
+							height={80}
+							onClick={handleRightArrowClick}
+						/>
+					</div>
+					<div className={styles.leftArrow}>
+						<Arrow
+							direction='left'
+							width={47}
+							height={80}
+							onClick={handleLeftArrowClick}
+						/>
+					</div>
+					<Typography
+						tag='p'
+						color='light'
+						size='font-size-xl'
+						weight='semibold'
+						className='absolute--bottom-center'
+					>
+						{currentImageIndex + 1}/{images.length}
+					</Typography>
+				</>
+			)}
 		</div>
 	);
 };
