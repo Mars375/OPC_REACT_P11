@@ -54,6 +54,9 @@
 		margin-right: $value;
 	}
 }
+.m-auto {
+	margin: auto;
+}
 
 @each $key, $value in $spacing-values {
 	.p-#{$key} {
@@ -122,13 +125,11 @@
 	display: flex;
 }
 
-.filter > img {
-	filter: brightness(0.5);
-}
-
-@each $key, $value in $drop-shadow-values {
-	.box-shadow-#{$key} {
-		box-shadow: $value;
+.filter {
+	height: 223px;
+	max-width: 1240px;
+	& > img {
+		filter: brightness(0.5);
 	}
 }
 

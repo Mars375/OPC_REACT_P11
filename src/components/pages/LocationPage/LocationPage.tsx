@@ -7,7 +7,7 @@ import Typography from "../../atoms/Typography/Typography";
 import ImageWithText from "../../molecules/ImageWithText/ImageWithText";
 import RatingStars from "../../molecules/RatingStars/RatingStars";
 import Tag from "../../atoms/Tag/Tag";
-import Dropdown from "../../atoms/Dropdown/Dropdown";
+import Dropdown from "../../molecules/Dropdown/Dropdown";
 import Gallery from "../../molecules/Gallery/Gallery";
 
 export default function LocationPage() {

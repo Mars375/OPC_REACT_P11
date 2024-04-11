@@ -100,6 +100,7 @@ enum MaxWidthSize {
 	"max-w-auto" = "max-w-auto",
 	"max-w-full" = "max-w-full",
 	"max-w-screen" = "max-w-screen",
+	"max-w-aboutDropdown" = "max-w-aboutDropdown",
 }
 
 enum MinHeightSize {

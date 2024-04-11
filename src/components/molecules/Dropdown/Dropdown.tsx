@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { DropdownProps } from "../../../utils/type";
 import styles from "./Dropdown.module.scss";
-import Arrow from "../Arrow/Arrow";
+import Arrow from "../../atoms/Arrow/Arrow";
+import Typography from "../../atoms/Typography/Typography";
 
 const Dropdown: React.FC<DropdownProps> = ({
 	locDropdown = true,
@@ -44,7 +45,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 						))}
 					</ul>
 				) : (
-					<p className='p-5'>{option}</p>
+					<Typography tag='p' className='p-5'>
+						{option}
+					</Typography>
 				)}
 			</div>
 		</div>
