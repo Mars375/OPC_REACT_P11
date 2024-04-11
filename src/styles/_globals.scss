@@ -207,19 +207,19 @@
 			.#{$breakpoint}\:gap-#{$key} {
 				gap: $value;
 			}
+		}
 
-			//width
-			@each $key, $value in $width-values {
-				.#{$breakpoint}\:w-#{$key} {
-					width: $value;
-				}
+		//width
+		@each $key, $value in $width-values {
+			.#{$breakpoint}\:w-#{$key} {
+				width: $value;
 			}
+		}
 
-			//height
-			@each $key, $value in $height-values {
-				.#{$breakpoint}\:h-#{$key} {
-					height: $value;
-				}
+		//height
+		@each $key, $value in $height-values {
+			.#{$breakpoint}\:h-#{$key} {
+				height: $value;
 			}
 		}
 	}

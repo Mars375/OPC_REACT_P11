@@ -23,19 +23,10 @@ const Gallery: React.FC<GalleryProps> = ({
 
 	const handleRightArrowClick = () => {
 		setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-		setIsLoading(true);
-
-		setTimeout(() => {
-			setIsLoading(false);
-		}, 1000);
 	};
 
 	const handleLeftArrowClick = () => {
 		setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-		setIsLoading(true);
-		setTimeout(() => {
-			setIsLoading(false);
-		}, 1000);
 	};
 
 	const handleImageLoad = () => {

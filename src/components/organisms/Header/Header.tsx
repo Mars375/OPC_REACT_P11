@@ -15,15 +15,15 @@ const Header: React.FC = () => {
 	return (
 		<header className='pb-12'>
 			<Link to='/'>
-				<h1 className='xs:w-36 xs:h-12'>
+				<h1 className='xs:w-36 md:w-52 xs:h-12 md:h-16'>
 					<Picture src={logo} alt='SVG Logo' />
 				</h1>
 			</Link>
 			<Navigation
 				navLinks={navLinks}
 				underline
-				weight='xs:font-medium lg:font-bold'
-				textSize='sm:font-size-xs lg:font-size-2xl'
+				weight='xs:font-medium md:font-bold'
+				textSize='xs:font-size-xs md:font-size-2xl'
 			/>
 		</header>
 	);
