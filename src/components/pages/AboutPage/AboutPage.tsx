@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import DefaultTemplate from "../../templates/DefaultTemplate/DefaultTemplate";
-import Picture from "../../atoms/Picture/Picture";
-import Dropdown from "../../molecules/Dropdown/Dropdown";
 import hero from "../../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png";
 import { fetchAll } from "../../../api/aboutApi";
-import FadeLoader from "../../atoms/FadeLoader/FadeLoader";
+import { FadeLoader, Picture } from "../../atoms/index";
+import { Dropdown } from "../../molecules/index";
 
 interface DataItem {
 	title: string;

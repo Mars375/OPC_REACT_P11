@@ -3,12 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import DefaultTemplate from "../../templates/DefaultTemplate/DefaultTemplate";
 import LocationsContext from "../../../contexts/LocationsContext";
 import { LocationType } from "../../../utils/type";
-import Typography from "../../atoms/Typography/Typography";
-import ImageWithText from "../../molecules/ImageWithText/ImageWithText";
-import RatingStars from "../../molecules/RatingStars/RatingStars";
-import Tag from "../../atoms/Tag/Tag";
-import Dropdown from "../../molecules/Dropdown/Dropdown";
-import Gallery from "../../molecules/Gallery/Gallery";
+import { Typography, Tag } from "../../atoms/";
+import { ImageWithText, RatingStars, Dropdown, Gallery } from "../../molecules";
 
 export default function LocationPage() {
 	const [location, setLocation] = useState<LocationType | undefined>(undefined);

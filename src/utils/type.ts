@@ -7,12 +7,12 @@ export type TypographyProps = {
 	size?:
 		| "font-size-xs"
 		| "font-size-sm"
-		| "font-size-base"
+		| "font-size-md"
 		| "font-size-lg"
 		| "font-size-xl"
 		| "font-size-2xl"
 		| "font-size-3xl"
-		| "font-size-4xl"
+		| "font-size-responsive"
 		| "font-size-custom";
 	children?: React.ReactNode;
 	className?: string;

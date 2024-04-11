@@ -1,8 +1,7 @@
 import React from "react";
-import Typography from "../../atoms/Typography/Typography";
-import Picture from "../../atoms/Picture/Picture";
 import styles from "./ImageWithText.module.scss";
 import { ImageWithTextProps } from "../../../utils/type";
+import { Typography, Picture } from "../../atoms/";
 
 const ImageWithText: React.FC<ImageWithTextProps> = ({
 	src,
@@ -18,7 +17,7 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({
 	className,
 	gradient,
 }) => {
-	const containerClassName = `absolute--${textPosition} p-3`;
+	const containerClassName = `absolute--${textPosition} p-3 w-full`;
 
 	return (
 		<div className={`relative ${className} ${styles.imgFilter}`}>

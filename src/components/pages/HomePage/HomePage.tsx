@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
-import DefaultTemplate from "../../templates/DefaultTemplate/DefaultTemplate";
-import ImageWithText from "../../molecules/ImageWithText/ImageWithText";
-import hero from "../../../assets/IMG.png";
-import { LocationType } from "../../../utils/type";
-import styles from "./HomePage.module.scss";
-import LocationsContext from "../../../contexts/LocationsContext";
 import { Link } from "react-router-dom";
-import FadeLoader from "../../atoms/FadeLoader/FadeLoader";
+import DefaultTemplate from "../../templates/DefaultTemplate/DefaultTemplate";
+import { LocationType } from "../../../utils/type";
+import LocationsContext from "../../../contexts/LocationsContext";
+import { ImageWithText } from "../../molecules/index";
+import { FadeLoader } from "../../atoms/index";
+
+import styles from "./HomePage.module.scss";
+import hero from "../../../assets/IMG.png";
 
 export default function HomePage() {
 	const [loading, setLoading] = useState(true);
@@ -29,7 +30,7 @@ export default function HomePage() {
 				rounded='md'
 				color='light'
 				weight='bold'
-				size='font-size-4xl'
+				size='font-size-3xl'
 				className='filter self-center'
 			/>
 			<div className={styles.mainContainer}>
