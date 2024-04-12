@@ -31,7 +31,7 @@ export default function HomePage() {
 				color='light'
 				weight='font-bold'
 				textSize='xs:font-size-2xl lg:font-size-3xl'
-				className='filter self-center xs:h-hero md:h-full'
+				className='filter self-center xs:h-hero md:h-full w-full'
 			/>
 			<div className={styles.mainContainer}>
 				{locations &&
