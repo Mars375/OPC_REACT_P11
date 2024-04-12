@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import Picture from "../../atoms/Picture/Picture";
-import Arrow from "../../atoms/Arrow/Arrow";
 import styles from "./Gallery.module.scss";
-import { Typography, FadeLoader } from "../../atoms/";
+import { Typography, FadeLoader, Arrow, Picture } from "../../atoms/";
 
 interface Image {
 	src: string;
@@ -11,11 +9,15 @@ interface Image {
 interface GalleryProps {
 	images: Image[];
 	className?: string;
+	arrowHeight?: string;
+	arrowWidth?: string;
 }
 
 const Gallery: React.FC<GalleryProps> = ({
 	images,
-	className = "rounded-xxl mb-3 h-custom2 overflow-hidden",
+	className = "relative rounded-xxl mb-3 h-custom2 overflow-hidden",
+	arrowHeight,
+	arrowWidth,
 }) => {
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 	const [isLoading, setIsLoading] = useState(true);
@@ -59,16 +61,16 @@ const Gallery: React.FC<GalleryProps> = ({
 					<div className={styles.rightArrow}>
 						<Arrow
 							direction='right'
-							width={47}
-							height={80}
+							height={arrowHeight}
+							width={arrowWidth}
 							onClick={handleRightArrowClick}
 						/>
 					</div>
 					<div className={styles.leftArrow}>
 						<Arrow
 							direction='left'
-							width={47}
-							height={80}
+							height={arrowHeight}
+							width={arrowWidth}
 							onClick={handleLeftArrowClick}
 						/>
 					</div>
@@ -77,7 +79,7 @@ const Gallery: React.FC<GalleryProps> = ({
 						color='light'
 						size='font-size-xl'
 						weight='semibold'
-						className='absolute--bottom-center p-2'
+						className='absolute-bottom-center'
 					>
 						{currentImageIndex + 1}/{images.length}
 					</Typography>

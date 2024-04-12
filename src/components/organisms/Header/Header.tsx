@@ -23,7 +23,7 @@ const Header: React.FC = () => {
 				navLinks={navLinks}
 				underline
 				weight='xs:font-medium md:font-bold'
-				textSize='xs:font-size-xs md:font-size-2xl xs:text-uppercase'
+				textSize='xs:font-size-xs md:font-size-2xl xs:text-uppercase md:text-capitalize'
 			/>
 		</header>
 	);

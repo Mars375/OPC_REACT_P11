@@ -22,6 +22,13 @@
 		transform: translateY(-50%);
 		cursor: pointer;
 		pointer-events: auto;
+		height: 80px;
+		width: 47px;
+
+		@media (max-width: 1024px) {
+			height: 24px;
+			width: 24px;
+		}
 	}
 
 	.leftArrow {

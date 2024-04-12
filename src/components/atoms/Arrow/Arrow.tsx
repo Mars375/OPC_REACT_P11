@@ -2,25 +2,23 @@ import React from "react";
 import styles from "./Arrow.module.scss";
 
 interface ArrowProps {
-	height?: number;
-	width?: number;
+	height?: string;
+	width?: string;
 	color?: string;
 	direction: "left" | "right" | "up" | "down";
 	onClick?: () => void;
 }
 
 const Arrow: React.FC<ArrowProps> = ({
-	height = 15,
-	width = 24,
+	height = "h-4",
+	width = "w-6",
 	color = "#fff",
 	direction,
 	onClick,
 }) => {
 	return (
 		<svg
-			className={`${styles.arrow} ${styles[direction]}`}
-			width={width}
-			height={height}
+			className={`${styles.arrow} ${styles[direction]} ${height} ${width}`}
 			viewBox='0 0 24 15'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'

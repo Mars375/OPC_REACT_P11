@@ -32,54 +32,65 @@ export default function LocationPage() {
 			src: picture,
 			alt: location.title,
 		})) || [];
-
 	return (
 		<DefaultTemplate>
-			<Gallery images={images} />
-			<div className='flex justify-between'>
-				<div>
+			<Gallery
+				images={images}
+				arrowHeight='xs:h-4 lg:h-17'
+				arrowWidth='xs:w-6 lg:w-12'
+			/>
+			<div className='flex justify-between xs:flex-column lg:flex-row'>
+				<div className='flex flex-column xs:gap-3 md:gap-0'>
 					<Typography tag='h2' color='primary' size='font-size-3xl'>
 						{location?.title}
 					</Typography>
 					<Typography tag='p' color='dark' size='font-size-lg'>
 						{location?.location}
 					</Typography>
+					<div className='mt-5 flex gap-2'>
+						{location?.tags.map((tag, index) => (
+							<Tag
+								key={index}
+								rounded='lg'
+								color='light'
+								minWidth='min-w-tag'
+								height='h-6'
+								className='justify-center flex items-center font-weight-bold font-size-sm pr-4 pl-4'
+							>
+								{tag}
+							</Tag>
+						))}
+					</div>
 				</div>
-				<ImageWithText
-					src={location?.host.picture || ""}
-					alt={location?.host.name || ""}
-					text={location?.host.name || ""}
-					rounded='full'
-					imageWidth='w-16'
-					imageHeight='h-16'
-					color='primary'
-					className='flex flex-row-reverse items-center gap-3 mb-4'
-				/>
-			</div>
-			<div className='flex justify-between'>
-				<div className='flex gap-2'>
-					{location?.tags.map((tag, index) => (
-						<Tag
-							key={index}
-							rounded='lg'
-							color='light'
-							minWidth='min-w-tag'
-							height='h-6'
-							className='justify-center flex items-center font-weight-bold font-size-sm pr-4 pl-4'
-						>
-							{tag}
-						</Tag>
-					))}
+				<div className='flex xs:flex-row lg:flex-column-reverse items-center xs:gap-8 lg:gap-0 justify-between'>
+					<RatingStars
+						rating={Number(location?.rating)}
+						color='primary'
+						space='mr-3'
+					/>
+					<ImageWithText
+						src={location?.host.picture || ""}
+						alt={location?.host.name || ""}
+						text={location?.host.name || ""}
+						rounded='full'
+						imageWidth='w-16'
+						imageHeight='h-16'
+						color='primary'
+						className='flex flex-row-reverse items-center gap-3 mb-4 w-footer self-end'
+					/>
 				</div>
-				<RatingStars
-					rating={Number(location?.rating)}
-					color='primary'
-					space='mr-3'
-				/>
 			</div>
-			<div className='flex justify-between gap-14 mt-6 mb-12'>
-				<Dropdown title='Description' option={location?.description || []} />
-				<Dropdown title='Equipements' option={location?.equipments || []} />
+			<div className='flex xs:flex-column lg:flex-row justify-between lg:gap-14 xs:gap-5 mt-6 mb-12'>
+				<Dropdown
+					title='Description'
+					option={location?.description || []}
+					className='xs:max-m-full lg:max-w-half flex-dropdown'
+				/>
+				<Dropdown
+					title='Equipements'
+					option={location?.equipments || []}
+					className='xs:max-m-full lg:max-w-half flex-dropdown'
+				/>
 			</div>
 		</DefaultTemplate>
 	);

@@ -125,6 +125,10 @@
 	display: flex;
 }
 
+.flex-dropdown {
+	flex: 1 0 auto;
+}
+
 .filter {
 	height: 223px;
 	& > img {
@@ -156,7 +160,7 @@
 	}
 }
 
-@each $key, $value in $gap-values {
+@each $key, $value in $spacing-values {
 	.gap-#{$key} {
 		gap: $value;
 	}
@@ -188,6 +192,11 @@
 		.#{$breakpoint}\:text-uppercase {
 			text-transform: uppercase;
 		}
+
+		.#{$breakpoint}\:text-capitalize {
+			text-transform: capitalize;
+		}
+
 		//font-size
 		@each $key, $value in $font-sizes {
 			.#{$breakpoint}\:font-size-#{$key} {
@@ -203,7 +212,7 @@
 		}
 
 		//gap
-		@each $key, $value in $gap-values {
+		@each $key, $value in $spacing-values {
 			.#{$breakpoint}\:gap-#{$key} {
 				gap: $value;
 			}
@@ -213,6 +222,13 @@
 		@each $key, $value in $width-values {
 			.#{$breakpoint}\:w-#{$key} {
 				width: $value;
+			}
+		}
+
+		//max-width
+		@each $key, $value in $width-values {
+			.#{$breakpoint}\:max-w-#{$key} {
+				max-width: $value;
 			}
 		}
 
@@ -230,6 +246,13 @@
 				@each $property, $value in $styles {
 					#{$property}: $value;
 				}
+			}
+		}
+
+		//flex direction
+		@each $key, $value in $flex-direction {
+			.#{$breakpoint}\:flex-#{$key} {
+				flex-direction: $value;
 			}
 		}
 	}

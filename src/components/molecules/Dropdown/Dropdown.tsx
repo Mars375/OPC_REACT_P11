@@ -9,7 +9,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 	option,
 	titleStyle = "font-size-base text-light font-weight-bold bg-primary p-4",
 	menuStyle = "bg-secondary line-height-custom ",
-	maxWidth = "max-w-dropdown",
+	maxWidth = "",
 	rounded = "sm",
 	className,
 }) => {
@@ -20,11 +20,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 	};
 
 	return (
-		<div
-			className={`${
-				locDropdown ? styles.dropdown : ""
-			} ${maxWidth} rounded-${rounded} ${className}`}
-		>
+		<div className={`${maxWidth} rounded-${rounded} ${className}`}>
 			<h3
 				onClick={toggleDropdown}
 				className={`${titleStyle} rounded-${rounded} flex justify-between cursor-pointer`}

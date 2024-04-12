@@ -16,7 +16,7 @@ export default function HomePage() {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 2000);
+		}, 1000);
 	}, []);
 
 	return (
@@ -40,7 +40,7 @@ export default function HomePage() {
 							to={`/location/${location.id}`}
 							key={location.id}
 							style={{ animationDelay: `${index * 0.2}s` }}
-							className={`${styles.fadeIn} w-full`}
+							className={`${styles.fadeIn} xs:w-full md:w-auto`}
 						>
 							<ImageWithText
 								src={location.cover}
