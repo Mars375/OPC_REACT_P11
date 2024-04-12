@@ -22,8 +22,10 @@
 header,
 main {
 	margin: 0 6rem;
-	flex: 1 0 auto;
-	align-items: center;
+}
+
+main {
+	flex: 1;
 }
 
 footer {
@@ -33,7 +35,7 @@ footer {
 @media screen and (max-width: 768px) {
 	header,
 	main {
-		margin: 0 1.25rem;
+		margin: 1.25rem;
 	}
 
 	#root {

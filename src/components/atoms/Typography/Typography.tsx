@@ -5,7 +5,7 @@ export const Typography: React.FC<TypographyProps> = ({
 	tag: Tag = "p",
 	color = "dark",
 	weight = "font-regular",
-	size = "font-size-md",
+	size = "font-size-lg",
 	children,
 	className,
 }) => {
