@@ -222,5 +222,15 @@
 				height: $value;
 			}
 		}
+
+		//position
+		@each $position, $styles in $positions {
+			.#{$breakpoint}\:absolute-#{$position} {
+				position: absolute;
+				@each $property, $value in $styles {
+					#{$property}: $value;
+				}
+			}
+		}
 	}
 }

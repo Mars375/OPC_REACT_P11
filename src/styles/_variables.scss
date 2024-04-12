@@ -51,7 +51,7 @@ $width-values: (
 	//122px
 	dropdown: 36.375rem,
 	//582px
-	custom: 21.25rem,
+	cardDekstop: 21.25rem,
 	//340px
 	custom2: 26rem,
 	//415px
@@ -96,10 +96,14 @@ $height-values: (
 	// 60px
 	16: 4rem,
 	// 64px
-	custom: 21.25rem,
+	cardMobile: 16rem,
+	//256px
+	cardDekstop: 21.25rem,
 	//340px
 	custom2: 26rem,
 	//415px
+	hero: 7rem,
+	//111px
 	full: 100%,
 	screen: 100vh,
 	auto: auto,
@@ -226,6 +230,11 @@ $positions: (
 		bottom: 0,
 		left: 50%,
 		transform: translateX(-50%),
+	),
+	center-left: (
+		top: 50%,
+		left: 0,
+		transform: translateY(-50%),
 	),
 );
 

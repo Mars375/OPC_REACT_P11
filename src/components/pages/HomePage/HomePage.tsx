@@ -26,12 +26,12 @@ export default function HomePage() {
 				src={hero}
 				alt="Description de l'image"
 				text='Chez vous, partout et ailleurs'
-				textClass='absolute-center'
+				textClass='xs:absolute-center-left lg:absolute-center p-3 w-full'
 				rounded='md'
 				color='light'
 				weight='font-bold'
-				textSize='sm:font-size-2xl lg:font-size-3xl'
-				className='filter self-center'
+				textSize='xs:font-size-2xl lg:font-size-3xl'
+				className='filter self-center xs:h-hero md:h-full'
 			/>
 			<div className={styles.mainContainer}>
 				{locations &&
@@ -40,7 +40,7 @@ export default function HomePage() {
 							to={`/location/${location.id}`}
 							key={location.id}
 							style={{ animationDelay: `${index * 0.2}s` }}
-							className={styles.fadeIn}
+							className={`${styles.fadeIn} w-full`}
 						>
 							<ImageWithText
 								src={location.cover}
@@ -48,9 +48,9 @@ export default function HomePage() {
 								alt={location.title}
 								textClass='absolute-bottom-left p-3 w-full'
 								color='light'
-								weight='bold'
+								weight='font-bold'
 								textSize='font-size-lg'
-								className='w-custom h-custom'
+								className='md:w-cardDekstop md:h-cardDekstop xs:w-full xs:h-cardMobile'
 								rounded='lg'
 								gradient='gradient'
 							/>

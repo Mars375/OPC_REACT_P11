@@ -1,12 +1,12 @@
 .mainContainer {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 60px;
+	gap: 3.75rem;
 	justify-content: center;
 	background-color: #f6f6f6;
-	padding: 50px;
-	margin: 50px 0;
-	border-radius: 25px;
+	padding: 3rem;
+	margin: 3rem 0;
+	border-radius: 1.5rem;
 }
 
 @keyframes fadeIn {
@@ -22,4 +22,13 @@
 	animation-name: fadeIn;
 	animation-duration: 1s;
 	animation-fill-mode: both;
+}
+
+//media queries
+@media screen and (max-width: 768px) {
+	.mainContainer {
+		gap: 1.25rem;
+		padding: 0;
+		background-color: white;
+	}
 }
