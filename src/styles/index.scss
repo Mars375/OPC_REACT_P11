@@ -11,19 +11,32 @@
 	list-style: none;
 }
 
-body {
+#root {
 	margin-top: 2.75rem;
 	font-family: $font-family;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 header,
 main {
 	margin: 0 6rem;
+	flex: 1 0 auto;
+	align-items: center;
+}
+
+footer {
+	flex-shrink: 0;
 }
 
 @media screen and (max-width: 768px) {
 	header,
 	main {
 		margin: 0 1.25rem;
+	}
+
+	#root {
+		margin-top: 0;
 	}
 }

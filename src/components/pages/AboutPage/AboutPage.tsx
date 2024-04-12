@@ -28,7 +28,7 @@ export default function About() {
 	return (
 		<DefaultTemplate>
 			{loading && <FadeLoader />}
-			<div className='filter'>
+			<div className='filter xs:h-hero md:h-full'>
 				<Picture src={hero} alt="Description de l'image" rounded='md' />
 			</div>
 			<div className='flex flex-column items-center gap-8 m-8'>
