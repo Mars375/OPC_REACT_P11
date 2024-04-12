@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import DefaultTemplate from "../../templates/DefaultTemplate/DefaultTemplate";
 import LocationsContext from "../../../contexts/LocationsContext";
 import { LocationType } from "../../../utils/type";
-import { Typography, Tag } from "../../atoms/";
+import { Typography, Tag } from "../../atoms";
 import { ImageWithText, RatingStars, Dropdown, Gallery } from "../../molecules";
 
 export default function LocationPage() {
@@ -51,11 +51,11 @@ export default function LocationPage() {
 						{location?.tags.map((tag, index) => (
 							<Tag
 								key={index}
-								rounded='lg'
+								rounded='md'
 								color='light'
 								minWidth='min-w-tag'
 								height='h-6'
-								className='justify-center flex items-center font-weight-bold font-size-sm pr-4 pl-4'
+								className='font-bold justify-center flex items-center xs:font-size-xxs md:font-size-sm pr-4 pl-4'
 							>
 								{tag}
 							</Tag>

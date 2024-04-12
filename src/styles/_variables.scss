@@ -114,6 +114,8 @@ $height-values: (
 
 // Font sizes
 $font-sizes: (
+	xxs: 0.625rem,
+	// 10px
 	xs: 0.75rem,
 	// 12px
 	sm: 0.875rem,
@@ -197,9 +199,9 @@ $rounded: (
 	// 12px
 	xl: 1rem,
 	// 16px
-	xxl: 1.5rem,
+	"2xl": 1.5rem,
 	// 24px
-	xxxl: 2rem,
+	"3xl": 2rem,
 	// 32px
 	custom: 3rem,
 	// 48px
@@ -255,6 +257,13 @@ $justify-content: (
 	between: space-between,
 	around: space-around,
 	evenly: space-evenly,
+);
+
+//flex-wrap
+$flex-wrap: (
+	wrap: wrap,
+	wrap-reverse: wrap-reverse,
+	no-wrap: nowrap,
 );
 
 //align-items

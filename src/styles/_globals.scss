@@ -160,6 +160,13 @@
 	}
 }
 
+// flex-wrap classes
+@each $key, $value in $flex-wrap {
+	.flex-wrap-#{$key} {
+		flex-wrap: $value;
+	}
+}
+
 @each $key, $value in $spacing-values {
 	.gap-#{$key} {
 		gap: $value;
@@ -253,6 +260,35 @@
 		@each $key, $value in $flex-direction {
 			.#{$breakpoint}\:flex-#{$key} {
 				flex-direction: $value;
+			}
+		}
+
+		@each $key, $value in $colors {
+			.#{$breakpoint}\:bg-#{$key} {
+				background-color: $value;
+			}
+		}
+
+		//padding classes
+		@each $key, $value in $spacing-values {
+			.#{$breakpoint}\:p-#{$key} {
+				padding: $value;
+			}
+
+			.#{$breakpoint}\:pt-#{$key} {
+				padding-top: $value;
+			}
+
+			.#{$breakpoint}\:pb-#{$key} {
+				padding-bottom: $value;
+			}
+
+			.#{$breakpoint}\:pl-#{$key} {
+				padding-left: $value;
+			}
+
+			.#{$breakpoint}\:pr-#{$key} {
+				padding-right: $value;
 			}
 		}
 	}

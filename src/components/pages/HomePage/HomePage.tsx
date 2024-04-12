@@ -33,7 +33,7 @@ export default function HomePage() {
 				textSize='xs:font-size-2xl lg:font-size-3xl'
 				className='filter self-center xs:h-hero md:h-full w-full'
 			/>
-			<div className={styles.mainContainer}>
+			<div className='flex xs:gap-5 xs:p-0 xs:bg-light md:gap-16 justify-center md:bg-secondary md:p-12 mt-12 mb-12 rounded-2xl flex-wrap-wrap'>
 				{locations &&
 					locations.locations.map((location: LocationType, index: number) => (
 						<Link

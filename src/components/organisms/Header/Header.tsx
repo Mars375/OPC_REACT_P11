@@ -13,7 +13,7 @@ const Header: React.FC = () => {
 	];
 
 	return (
-		<header className='pb-12'>
+		<header className='xs:p-6 md:pb-12'>
 			<Link to='/'>
 				<h1 className='xs:w-36 md:w-52 xs:h-12 md:h-16'>
 					<Picture src={logo} alt='SVG Logo' />
