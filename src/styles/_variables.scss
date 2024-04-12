@@ -99,6 +99,8 @@ $height-values: (
 	// 64px
 	17: 5rem,
 	// 80px
+	footer: 13rem,
+	// 208px
 	cardMobile: 16rem,
 	//256px
 	cardDekstop: 21.25rem,
@@ -187,6 +189,9 @@ $spacing-values: (
 	custom: 8.7rem,
 	// 139px
 );
+
+//z-index
+$z-index: (-2: -2, -1: -1, 0: 0, 10: 10, 900: 900);
 
 // Variables pour les coins arrondis
 $rounded: (

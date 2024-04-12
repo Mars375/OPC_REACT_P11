@@ -4,7 +4,6 @@ import styles from "./Dropdown.module.scss";
 import { Typography, Arrow } from "../../atoms/";
 
 const Dropdown: React.FC<DropdownProps> = ({
-	locDropdown = true,
 	title,
 	option,
 	titleStyle = "font-size-base text-light font-weight-bold bg-primary p-4",

@@ -2,11 +2,10 @@ import React from "react";
 import Picture from "../../atoms/Picture/Picture";
 import { Typography } from "../../atoms/";
 import logo from "../../../assets/LOGO (1).png";
-import "./Footer.module.scss";
 
 export default function Footer() {
 	return (
-		<footer>
+		<footer className='bg-dark flex justify-center flex-column items-center h-footer'>
 			<Picture
 				src={logo}
 				alt='SVG Logo'

@@ -4,8 +4,6 @@ import { Picture } from "../../atoms/";
 import { Navigation } from "../../molecules/";
 import logo from "../../../assets/LOGO.png";
 
-import "./Header.module.scss";
-
 const Header: React.FC = () => {
 	const navLinks = [
 		{ link: "/", text: "Accueil" },
@@ -13,7 +11,7 @@ const Header: React.FC = () => {
 	];
 
 	return (
-		<header className='xs:p-6 md:pb-12'>
+		<header className='xs:p-6 md:pb-12 flex justify-between'>
 			<Link to='/'>
 				<h1 className='xs:w-36 md:w-52 xs:h-12 md:h-16'>
 					<Picture src={logo} alt='SVG Logo' />
