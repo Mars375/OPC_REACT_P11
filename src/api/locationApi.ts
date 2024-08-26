@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3000/data/accomodations.json";
+const API_BASE_URL = "/data/accomodations.json";
 
 export const fetchAllLocations = async () => {
 	try {
